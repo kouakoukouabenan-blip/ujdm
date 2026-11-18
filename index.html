@@ -14,7 +14,7 @@
 :root{
   --papier:#FAFAF7; --papier2:#F0F1EC; --encre:#15181D; --gris:#5A626C; --trait:#DCDED8;
   --rouge:#CF2A37; --bleu:#1F4E9E; --vert:#1C8A4C; --jed:#235CA6; --orange:#F07F13;
-  --carte:#FFFFFF; --nuit:#EAF0F8; --surNuit:#15181D; --apR:#C62834; --apB:#1F4E9E; --apV:#1B804A;
+  --carte:#FFFFFF; --nuit:#EAF0F8; --surNuit:#15181D; --apR:#C62834; --apB:#1F4E9E; --apV:#1B804A; --nuitAxe:#2A3240;
   --f-titre:"Archivo","Arial Narrow",Arial,sans-serif;
   --f-texte:"Hanken Grotesk","Segoe UI",system-ui,sans-serif;
   --f-fiche:"IBM Plex Mono",ui-monospace,Menlo,monospace;
@@ -190,7 +190,7 @@ section{padding-block:96px}
 
 /* frise */
 .frise{background:var(--papier2)}
-.fr{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:0;overflow-x:auto;scrollbar-width:thin}
+.fr{position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;overflow-x:auto;scrollbar-width:thin}
 .fr::before{content:"";position:absolute;left:0;right:0;top:46px;height:2px;background:var(--encre)}
 .fr li{list-style:none;padding:0 18px 0 0;position:relative;min-width:170px}
 .fr .an{font:900 34px/1 var(--f-titre);font-stretch:125%;display:block;height:46px;font-variant-numeric:tabular-nums}
@@ -254,6 +254,28 @@ section{padding-block:96px}
 .part .l div{background:#fff;border:1px solid var(--trait);height:96px;padding:12px 20px;display:grid;place-items:center;flex:1 1 150px}
 .part .l img{max-height:66px;width:auto}
 .part .l .atk{font:900 italic 24px var(--f-titre);color:#111;letter-spacing:.02em}
+
+/* valeurs, mot du PCA, ambition, partenaires */
+.valeurs{margin-top:14px;padding-top:22px;border-top:2px solid var(--encre)}
+.valeurs ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:0}
+.valeurs li{display:grid;grid-template-columns:180px minmax(0,1fr);gap:14px;padding:11px 0;border-bottom:1px solid var(--trait)}
+.valeurs b{font:800 16px var(--f-titre);font-stretch:112%;text-transform:uppercase;color:var(--encre)}
+.valeurs li:nth-child(3n+1) b{color:var(--rouge)} .valeurs li:nth-child(3n+2) b{color:var(--bleu)} .valeurs li:nth-child(3n) b{color:var(--vert)}
+.valeurs span{font-size:15px}
+.pca{padding-block:20px 80px}
+.pca figure{margin:0 auto;max-width:900px;text-align:center}
+.pca blockquote{margin:0;font:600 clamp(21px,2.6vw,32px)/1.35 var(--f-texte);text-wrap:balance}
+.pca blockquote em{font-style:normal;color:var(--rouge)}
+.pca figcaption{margin-top:22px;display:grid;gap:3px}
+.pca figcaption b{font:800 16px var(--f-titre);font-stretch:112%;text-transform:uppercase}
+.pca figcaption span{color:var(--gris);font-size:14.5px}
+.axe.n4{background:var(--nuitAxe)}
+.amb{margin-top:28px;max-width:none;font-size:18px;line-height:1.55;padding:22px 26px;border:2px solid var(--encre);background:var(--carte)}
+.amb b{color:var(--rouge)}
+.prix{grid-template-columns:repeat(3,minmax(0,1fr))}
+.pl{max-width:none;font:800 clamp(17px,1.9vw,22px)/1.6 var(--f-titre);font-stretch:112%;display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px}
+.pl i{width:6px;height:6px;border-radius:50%;background:var(--orange);display:inline-block}
+@media (max-width:960px){ .ouv .h1{font-size:clamp(28px,8.4vw,48px);font-stretch:112%} .valeurs li{grid-template-columns:1fr;gap:2px} .prix{grid-template-columns:1fr} }
 
 /* contact */
 .contact{background:var(--nuit);color:var(--surNuit)}
@@ -367,8 +389,8 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;pad
       <div class="g">
         <div>
           <div class="fiche"><span class="tri"><i></i><i></i><i></i></span>Man · Région du Tonkpi · Côte d'Ivoire</div>
-          <h2 class="h1"><span class="l">Une jeunesse</span><span class="l">qui prend sa</span><span class="l"><em>place.</em></span></h2>
-          <p class="chapo">Depuis 2019, l'Union des Jeunes Dynamiques de Man forme, accompagne et rassemble les jeunes pour qu'ils deviennent responsables, autonomes et acteurs du développement durable.</p>
+          <h2 class="h1"><span class="l">Une jeunesse</span><span class="l">autonome et</span><span class="l"><em>responsable.</em></span></h2>
+          <p class="chapo">C'est notre vision : une jeunesse moteur d'un développement inclusif et durable, au service de sa communauté et de la nation. L'Union des Jeunes Dynamiques de Man agit pour elle depuis le quartier Mahou, où tout a commencé en 2017.</p>
           <div class="ctas">
             <a class="bt" href="#axes">Nos actions</a>
             <a class="bt clair" href="#contact">Devenir partenaire</a>
@@ -376,7 +398,7 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;pad
         </div>
         <figure class="photo">
           <img src="img/cercle.webp" alt="Des jeunes de l'UJDM en cercle, photographiés depuis le sol, tête penchée vers l'objectif" width="736" height="981">
-          <figcaption class="fiche">Semaine du Dynamisme · Man</figcaption>
+          <figcaption class="fiche">Jeunes de l'UJDM · Man</figcaption>
         </figure>
       </div>
     </div>
@@ -385,77 +407,100 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;pad
 
   <div class="chiffres">
     <div class="w">
-      <div><b>650+</b><span>jeunes réunis lors des deux premières éditions</span></div>
-      <div><b>2021</b><span>reconnaissance officielle de l'association</span></div>
-      <div><b>2</b><span>distinctions nationales reçues en 2025</span></div>
-      <div><b>3</b><span>axes d'action, de l'emploi à l'environnement</span></div>
+      <div><b>9 500+</b><span>personnes sensibilisées ou touchées par nos activités</span></div>
+      <div><b>5 272</b><span>élèves, dont 2 760 filles, ont désormais accès aux outils numériques</span></div>
+      <div><b>250+</b><span>adolescents et jeunes accompagnés directement en 2025</span></div>
+      <div><b>40+</b><span>formations et ateliers organisés</span></div>
     </div>
   </div>
-
 
   <section class="qui" id="qui">
     <div class="w g">
       <div>
         <div class="fiche" style="margin-bottom:18px">Qui sommes-nous</div>
-        <p class="lead">Nous rassemblons des jeunes femmes et des jeunes hommes autour d'une conviction simple : <strong>le développement de Man passe par sa jeunesse.</strong></p>
+        <p class="lead">Notre mission : <strong>contribuer au développement social, éducatif et économique en améliorant durablement les conditions de vie des jeunes.</strong></p>
         <div class="duo">
           <figure class="photo"><img src="img/parole.webp" alt="Une participante prend la parole au micro pendant un échange" loading="lazy"></figure>
           <figure class="photo"><img src="img/portrait.webp" alt="Un jeune participant concentré devant son ordinateur" loading="lazy"></figure>
         </div>
       </div>
       <div class="txt">
-        <p>Créée le 21 décembre 2019 et officiellement légalisée le 7 mai 2021, l'Union des Jeunes Dynamiques de Man (UJDM) est une organisation de jeunesse basée à Man, dans la région du Tonkpi.</p>
-        <p>Elle œuvre pour le renforcement des capacités des jeunes, la promotion de l'entrepreneuriat, de l'éducation, du leadership citoyen, de l'égalité des chances et de la protection de l'environnement.</p>
-        <p>À travers ses actions, elle favorise la participation active des jeunes au développement de leurs communautés et encourage l'émergence d'initiatives innovantes qui répondent aux défis sociaux, économiques et environnementaux.</p>
-        <figure class="photo" style="aspect-ratio:16/10;margin-top:18px"><img src="img/salle.webp" alt="Une salle pleine de jeunes participants lors d'une session de l'UJDM" loading="lazy"><figcaption class="fiche">Session de travail</figcaption></figure>
+        <p>L'Union des Jeunes Dynamiques de Man (UJDM) est une association à but non lucratif. Notre aventure a commencé en 2017 dans le quartier Mahou, à Man, avec l'Association des Jeunes Dynamiques du Quartier Mahou (AJDQM), lancée par Ibrahim Touré pour offrir aux jeunes un espace où se rassembler et améliorer les conditions de vie de la communauté.</p>
+        <p>Le 21 décembre 2019, l'AJDQM devient l'UJDM, pour accueillir davantage de jeunes engagés et élargir notre champ d'action. Nous intervenons dans l'entrepreneuriat des jeunes, la protection de l'environnement, l'autonomisation des femmes et des filles, la promotion du genre et des droits humains, et le développement communautaire.</p>
+        <p>Nos actions s'adressent aux adolescents et aux jeunes, aux femmes et aux filles, aux élèves et étudiants, aux jeunes entrepreneurs, aux organisations de jeunesse et aux communautés de la région du Tonkpi.</p>
+        <div class="valeurs" aria-label="Nos valeurs">
+          <div class="fiche">Nos valeurs</div>
+          <ul>
+            <li><b>Leadership</b><span>Prendre des initiatives et devenir acteur du changement.</span></li>
+            <li><b>Collaboration</b><span>La force du travail d'équipe et de l'entraide.</span></li>
+            <li><b>Courage</b><span>Agir avec conviction face aux difficultés.</span></li>
+            <li><b>Innovation</b><span>De nouvelles idées pour des solutions durables.</span></li>
+            <li><b>Inclusion</b><span>Chacun respecté, quels que soient son origine, son bord politique ou son parcours.</span></li>
+          </ul>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <section class="pca">
+    <div class="w">
+      <figure>
+        <blockquote>« Ce Plan Stratégique n'est pas seulement un document de référence, il constitue un engagement collectif envers notre communauté. <em>Ensemble, faisons de notre vision une réalité&nbsp;!</em>&nbsp;»</blockquote>
+        <figcaption><b>Ibrahim Touré</b><span>Fondateur et Président du Conseil d'Administration de l'UJDM</span></figcaption>
+      </figure>
     </div>
   </section>
 
   <section class="frise" id="parcours">
     <div class="w">
-      <div class="tete"><h2>Notre parcours</h2><p>Six dates qui racontent l'UJDM.</p></div>
+      <div class="tete"><h2>Notre parcours</h2><p>Du quartier Mahou à la reconnaissance nationale.</p></div>
       <ol class="fr">
-        <li><span class="an">2019</span><span class="pt"></span><b>Naissance de l'UJDM</b><small>Le 21 décembre, à Man.</small></li>
-        <li><span class="an">2021</span><span class="pt"></span><b>Reconnaissance officielle</b><small>Légalisation de l'association le 7 mai.</small></li>
-        <li><span class="an">2023</span><span class="pt"></span><b>1ʳᵉ Semaine du Dynamisme</b><small>Plus de 150 jeunes réunis à Man autour du leadership et de l'engagement communautaire.</small></li>
-        <li><span class="an">2024</span><span class="pt"></span><b>La montée en puissance</b><small>Les 20 et 21 décembre, plus de 500 jeunes leaders venus d'Abidjan, Bouaké, Daloa, Yamoussoukro, Man et Kouitongouné.</small></li>
-        <li><span class="an">2025</span><span class="pt"></span><b>Deux distinctions nationales</b><small>2ᵉ Prix National d'Excellence et Prix Éducation et Formation.</small></li>
-        <li><span class="an">2026</span><span class="pt"></span><b>Les JED 2026</b><small>La rencontre devient les Journées de l'Engagement et du Dynamisme, du 3 au 5 décembre.</small></li>
+        <li><span class="an">2017</span><span class="pt"></span><b>Les débuts à Mahou</b><small>Naissance de l'Association des Jeunes Dynamiques du Quartier Mahou (AJDQM).</small></li>
+        <li><span class="an">2019</span><span class="pt"></span><b>L'AJDQM devient l'UJDM</b><small>Le 21 décembre, pour ouvrir l'association à tous les jeunes engagés de Man.</small></li>
+        <li><span class="an">2022</span><span class="pt"></span><b>Premiers grands partenariats</b><small>Avec Global Fund for Children : un programme pour maintenir les jeunes filles à l'école secondaire.</small></li>
+        <li><span class="an">2024</span><span class="pt"></span><b>La Semaine du Dynamisme grandit</b><small>Plus de 500 jeunes leaders venus de six villes du pays réunis à Man.</small></li>
+        <li><span class="an">2025</span><span class="pt"></span><b>Trois distinctions</b><small>Prix Impact Jeunes, 2ᵉ Prix National d'Excellence et un Prix local d'excellence.</small></li>
+        <li><span class="an">2026</span><span class="pt"></span><b>Plan stratégique et JED</b><small>Adoption du Plan Stratégique 2026-2030 et lancement des JED, du 3 au 5 décembre.</small></li>
       </ol>
     </div>
   </section>
 
   <section id="axes">
     <div class="w">
-      <div class="tete"><h2>Nos actions</h2><p>Nos programmes s'articulent autour de trois axes stratégiques.</p></div>
+      <div class="tete"><h2>Nos actions</h2><p>Notre Plan Stratégique 2026-2030 repose sur quatre axes.</p></div>
       <div class="axes">
         <article class="axe r">
           <span class="n">1</span>
-          <div><h3>Employabilité et entrepreneuriat des jeunes</h3><p>Formations, ateliers pratiques, mentorat et mise en relation avec les recruteurs, pour aider les jeunes à trouver un emploi ou à créer le leur.</p></div>
+          <div><h3>Employabilité des jeunes et entrepreneuriat</h3><p>Formations qualifiantes, compétences numériques, orientation et mentorat, accompagnement des plans d'affaires et accès au financement. Grâce à la salle multimédia du Lycée Moderne 2 de Man, réhabilitée et équipée de 20 ordinateurs, 5 272 élèves ont accès au numérique.</p></div>
           <figure class="photo"><img src="img/atelier.webp" alt="Atelier de formation, des jeunes travaillent sur leurs ordinateurs" loading="lazy"></figure>
         </article>
         <article class="axe b">
           <span class="n">2</span>
-          <div><h3>Filles et femmes, genre et droits humains</h3><p>L'autonomisation des filles et des femmes, la promotion de l'égalité des chances et la défense des droits humains.</p></div>
+          <div><h3>Filles et femmes, genre et droits humains</h3><p>Clubs d'adolescentes, mentorat et approche SOAR, éducation complète à la sexualité, sensibilisation contre les violences basées sur le genre, les mariages précoces et la déscolarisation des filles.</p></div>
           <figure class="photo"><img src="img/remise.webp" alt="Des jeunes femmes et hommes reçoivent leurs attestations" loading="lazy"></figure>
         </article>
         <article class="axe v">
           <span class="n">3</span>
-          <div><h3>Environnement et développement communautaire</h3><p>La protection de l'environnement et des actions concrètes au service des communautés de Man et du Tonkpi.</p></div>
+          <div><h3>Environnement et développement communautaire</h3><p>Éducation environnementale, initiatives écocitoyennes, journées citoyennes et dialogue entre les jeunes et les acteurs locaux du Tonkpi.</p></div>
           <figure class="photo"><img src="img/repas.webp" alt="Des jeunes partagent un repas en plein air sous les arbres" loading="lazy"></figure>
         </article>
+        <article class="axe n4">
+          <span class="n">4</span>
+          <div><h3>Une organisation solide et durable</h3><p>Gouvernance, suivi-évaluation, communication et diversification des ressources, pour une UJDM crédible et autonome.</p></div>
+          <figure class="photo"><img src="img/salle.webp" alt="Réunion de travail des membres de l'UJDM" loading="lazy"></figure>
+        </article>
       </div>
+      <p class="amb"><b>Notre ambition pour 2030 :</b> devenir une organisation de référence dans le domaine de la jeunesse en Côte d'Ivoire, reconnue pour son impact, son professionnalisme et sa capacité à transformer durablement la vie des jeunes, des filles et des femmes.</p>
     </div>
   </section>
 
-
   <section id="prix">
     <div class="w">
-      <div class="tete"><h2>Distinctions</h2><p>En 2025, deux reconnaissances nationales pour notre travail.</p></div>
+      <div class="tete"><h2>Distinctions</h2><p>2025, l'année de la reconnaissance.</p></div>
       <div class="prix">
-        <article><span class="rg">2<sup>e</sup></span><div><h3>Prix National d'Excellence de la Meilleure Organisation de Jeunesse</h3><p>Une distinction qui salue l'engagement de l'UJDM et la qualité de ses interventions.</p></div></article>
-        <article><span class="rg" style="color:var(--vert)">★</span><div><h3>Prix Éducation et Formation</h3><p>Reçu lors du concours Impact Jeunes organisé par le Conseil National des Jeunes de Côte d'Ivoire (CNJCI).</p></div></article>
+        <article><span class="rg">2<sup>e</sup></span><div><h3>Prix National d'Excellence 2025</h3><p>Catégorie « Meilleure association de jeunesse ».</p></div></article>
+        <article><span class="rg" style="color:var(--vert)">★</span><div><h3>Prix Impact Jeunes 2025</h3><p>Catégorie Éducation, au concours organisé par le Conseil National des Jeunes de Côte d'Ivoire (CNJCI).</p></div></article>
+        <article><span class="rg" style="color:var(--bleu)">★</span><div><h3>Prix local d'excellence</h3><p>Une reconnaissance de notre travail auprès de la communauté.</p></div></article>
       </div>
     </div>
   </section>
@@ -476,7 +521,9 @@ footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;pad
 
   <div class="part">
     <div class="w">
-      <div class="fiche" style="margin-bottom:18px">Ils nous accompagnent</div>
+      <div class="fiche" style="margin-bottom:14px">Ils nous font confiance</div>
+      <p class="pl">Global Fund for Children <i></i> Give Smiles <i></i> Action Numérique Solidaire <i></i> AFMEF <i></i> CNJCI <i></i> Autorités locales de Man</p>
+      <div class="fiche" style="margin:30px 0 14px">Partenaires des JED 2026</div>
       <div class="l">
         <div><img src="img/ministere.png" alt="Ministère de la Promotion de la Jeunesse, de l'Insertion professionnelle et du Service civique" loading="lazy"></div>
         <div><img src="img/commune.png" alt="Commune de Man" loading="lazy"></div>
