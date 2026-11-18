@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>UJDM · Union des Jeunes Dynamiques de Man</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="L'Union des Jeunes Dynamiques de Man (UJDM) : organisation de jeunesse basée à Man, région du Tonkpi, Côte d'Ivoire. Organisatrice des JED 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,500;112,700;125,800;125,900&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Mise en page : pages de carnet de terrain. Gros titres larges, photos à bords francs avec légendes « fiche », trois couleurs du logo en aplats, la crête du mont Tonkpi comme fil conducteur. */
+:root{
+  --papier:#FAFAF7; --papier2:#F0F1EC; --encre:#15181D; --gris:#5A626C; --trait:#DCDED8;
+  --rouge:#CF2A37; --bleu:#1F4E9E; --vert:#1C8A4C; --jed:#235CA6; --orange:#F07F13;
+  --carte:#FFFFFF; --nuit:#EAF0F8; --surNuit:#15181D; --apR:#C62834; --apB:#1F4E9E; --apV:#1B804A;
+  --f-titre:"Archivo","Arial Narrow",Arial,sans-serif;
+  --f-texte:"Hanken Grotesk","Segoe UI",system-ui,sans-serif;
+  --f-fiche:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --max:1180px; color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;overflow-x:clip;background:var(--papier);color:var(--encre);font:400 17px/1.6 var(--f-texte);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.w{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-titre);font-stretch:125%;text-wrap:balance;margin:0;line-height:1.02;letter-spacing:-.01em}
+.fiche{font-family:var(--f-fiche);font-size:12px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--gris)}
+p{margin:0;max-width:62ch}
+
+/* bandeau JED */
+.annonce{display:block;background:var(--jed);color:#fff;text-decoration:none;font-size:14px;font-weight:600}
+.annonce .w{display:flex;align-items:center;gap:12px;min-height:42px;flex-wrap:wrap;padding-block:6px}
+.annonce b{font-family:var(--f-titre);font-stretch:125%;font-weight:900;letter-spacing:.02em}
+.annonce .sep{width:5px;height:5px;border-radius:50%;background:#FFB25C}
+.annonce .jm{font-family:var(--f-fiche);background:#fff;color:var(--jed);padding:3px 8px;border-radius:5px;font-size:12px}
+.annonce .go{margin-left:auto;display:inline-flex;align-items:center;gap:6px;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:620px){ .annonce .sep:last-of-type,.annonce .jm{display:none} .annonce .go{margin-left:0} }
+
+/* en-tête */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--papier)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--papier) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--trait)}
+header .w{display:flex;align-items:center;gap:22px;height:68px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{height:38px;width:auto;background:#fff;border-radius:6px;padding:3px 6px}
+.logo span{font:800 15px/1.1 var(--f-titre);font-stretch:112%}
+.logo small{display:block;font:500 11px/1.2 var(--f-texte);color:var(--gris)}
+nav{display:flex;gap:4px;margin-left:auto}
+nav a{text-decoration:none;font-weight:600;font-size:14.5px;padding:8px 12px;border-radius:8px;color:var(--gris)}
+nav a:hover{color:var(--encre);background:var(--papier2)}
+.bt{display:inline-flex;align-items:center;gap:9px;text-decoration:none;font:700 15px/1 var(--f-texte);padding:13px 18px;border-radius:10px;background:var(--encre);color:var(--papier);transition:transform .2s}
+.bt:hover{transform:translateY(-2px)}
+.bt.jed{background:var(--jed);color:#fff}
+.bt.clair{background:transparent;color:var(--encre);box-shadow:inset 0 0 0 1.5px var(--encre)}
+.bt svg{flex:none}
+.burger{display:none}
+
+/* ouverture */
+.ouv{padding-block:56px 0;position:relative}
+.ouv .g{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end}
+.ouv .fiche{display:flex;gap:10px;align-items:center;margin-bottom:22px}
+.tri{display:inline-flex;gap:3px}.tri i{width:16px;height:6px;display:block}
+.tri i:nth-child(1){background:var(--rouge)}.tri i:nth-child(2){background:var(--bleu)}.tri i:nth-child(3){background:var(--vert)}
+.ouv h1{font-size:clamp(44px,7.2vw,96px);font-weight:900;text-transform:uppercase;line-height:.93}
+.ouv h1 em{font-style:normal;color:var(--rouge)}
+.ouv .chapo{font-size:19px;color:var(--gris);margin-top:26px;max-width:46ch}
+.ouv .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.photo{position:relative;margin:0}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo figcaption{position:absolute;left:0;bottom:0;background:var(--papier);padding:8px 12px 0 0}
+.ouv .photo{aspect-ratio:4/5;max-height:560px}
+.ouv .photo::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:2px solid var(--rouge);z-index:-1}
+.rdv{position:absolute;right:-18px;bottom:-34px;display:flex;align-items:center;gap:16px;background:var(--jed);color:#fff;text-decoration:none;padding:16px 20px 16px 16px;box-shadow:0 18px 40px rgba(35,92,166,.35);max-width:calc(100% + 18px);transition:transform .25s}
+.rdv:hover{transform:translateY(-3px)}
+.rdv img{width:92px;height:auto;flex:none}
+.rdv small{display:block;font-family:var(--f-fiche);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#FFC07A}
+.rdv b{display:block;font:900 19px/1.15 var(--f-titre);font-stretch:112%;margin:3px 0}
+.rdv em{font-style:normal;font-size:13.5px;opacity:.92}
+.crete{display:block;width:100%;height:auto;margin-top:70px;color:var(--encre)}
+
+/* chiffres */
+.chiffres{border-top:2px solid var(--encre);border-bottom:1px solid var(--trait)}
+.chiffres .w{display:grid;grid-template-columns:repeat(4,1fr)}
+.chiffres .w>div{padding:26px 22px 24px 0}
+.chiffres .w>div+div{padding-left:22px;border-left:1px solid var(--trait)}
+.chiffres b{display:block;font:900 clamp(34px,4.4vw,54px)/1 var(--f-titre);font-stretch:125%;font-variant-numeric:tabular-nums}
+.chiffres span{display:block;margin-top:8px;font-size:14.5px;color:var(--gris);line-height:1.4}
+
+section{padding-block:96px}
+.tete{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.tete h2{font-size:clamp(32px,4.4vw,56px);font-weight:900;text-transform:uppercase}
+.tete p{color:var(--gris)}
+
+/* qui sommes-nous */
+.qui .g{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.qui .lead{font-size:22px;line-height:1.45;font-weight:500}
+.qui .lead strong{color:var(--rouge);font-weight:700}
+.qui .txt{display:grid;gap:18px;color:var(--gris)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:36px}
+.duo .photo{aspect-ratio:3/4}
+.duo .photo:last-child{margin-top:48px}
+
+/* frise */
+.frise{background:var(--papier2)}
+.fr{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:0;overflow-x:auto;scrollbar-width:thin}
+.fr::before{content:"";position:absolute;left:0;right:0;top:46px;height:2px;background:var(--encre)}
+.fr li{list-style:none;padding:0 18px 0 0;position:relative;min-width:170px}
+.fr .an{font:900 34px/1 var(--f-titre);font-stretch:125%;display:block;height:46px;font-variant-numeric:tabular-nums}
+.fr .pt{display:block;width:14px;height:14px;border-radius:50%;background:var(--papier2);border:3px solid var(--encre);margin:-8px 0 18px}
+.fr li:nth-child(3n+1) .pt{border-color:var(--rouge)} .fr li:nth-child(3n+2) .pt{border-color:var(--bleu)} .fr li:nth-child(3n) .pt{border-color:var(--vert)}
+.fr li:last-child .pt{background:var(--orange);border-color:var(--orange)}
+.fr b{display:block;font-size:16px;line-height:1.3;margin-bottom:6px}
+.fr small{display:block;color:var(--gris);font-size:14px;line-height:1.45}
+.fr ol{margin:0;padding:0;display:contents}
+
+/* axes */
+.axes{display:grid;gap:16px}
+.axe{display:grid;grid-template-columns:120px 1fr 300px;gap:32px;align-items:center;padding:28px;color:#fff;position:relative;overflow:hidden}
+.axe.r{background:var(--apR)} .axe.b{background:var(--apB)} .axe.v{background:var(--apV)}
+.axe .n{font:900 96px/0.8 var(--f-titre);font-stretch:125%;opacity:.28}
+.axe h3{font-size:clamp(22px,2.6vw,32px);font-weight:800;text-transform:uppercase;line-height:1.05}
+.axe p{margin-top:10px;color:rgba(255,255,255,.9);font-size:16px}
+.axe .photo{aspect-ratio:4/3;height:100%}
+.axe .photo img{filter:saturate(.95)}
+
+/* JED */
+.jedb{background:var(--jed);color:#fff;padding-block:0;overflow:hidden;position:relative}
+.jedb .w{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding-block:84px}
+.jedb .lg{width:min(260px,60%);height:auto}
+.jedb .fiche{color:rgba(255,255,255,.78)}
+.jedb h2{font-size:clamp(30px,3.8vw,48px);font-weight:900;text-transform:uppercase;margin-top:22px}
+.jedb .theme{font-size:20px;margin-top:18px;max-width:34ch;line-height:1.45}
+.jedb .info{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:26px;font-weight:600}
+.jedb .info span{display:flex;gap:8px;align-items:center}
+.jedb .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.jedb .bt{background:#fff;color:var(--jed)}
+.jedb .bt.o{background:var(--orange);color:#fff}
+.jedb ul{list-style:none;margin:0;padding:0;display:grid;gap:2px;background:rgba(255,255,255,.18);border-radius:4px;overflow:hidden}
+.jedb li{display:grid;grid-template-columns:116px 1fr;gap:16px;padding:16px 20px;background:var(--jed)}
+.jedb li b{font-family:var(--f-fiche);font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;color:#FFC07A;padding-top:3px}
+.jedb li span{font-size:15.5px;line-height:1.45}
+.jedb .bande{position:absolute;left:0;right:0;bottom:0;height:8px;display:flex}
+.jedb .bande i{flex:1}
+
+/* distinctions */
+.prix{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.prix article{border:2px solid var(--encre);padding:30px;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;background:var(--carte)}
+.prix .rg{font:900 64px/0.85 var(--f-titre);font-stretch:125%;color:var(--orange)}
+.prix .rg sup{font-size:.4em;vertical-align:top}
+.prix h3{font-size:22px;font-weight:800;line-height:1.15}
+.prix p{color:var(--gris);margin-top:8px;font-size:15.5px}
+
+/* images */
+.mos{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:10px}
+.mos .photo{overflow:hidden}
+.mos .photo img{transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.mos .photo:hover img{transform:scale(1.04)}
+.mos .grand{grid-column:span 2;grid-row:span 2}
+.mos .haut{grid-row:span 2}
+.mos .large{grid-column:span 2}
+.mos figcaption{font-size:11px}
+
+/* partenaires */
+.part{padding-block:64px;border-top:1px solid var(--trait)}
+.part .l{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.part .l div{background:#fff;border:1px solid var(--trait);height:96px;padding:12px 20px;display:grid;place-items:center;flex:1 1 150px}
+.part .l img{max-height:66px;width:auto}
+.part .l .atk{font:900 italic 24px var(--f-titre);color:#111;letter-spacing:.02em}
+
+/* contact */
+.contact{background:var(--nuit);color:var(--surNuit)}
+.contact .g{display:grid;grid-template-columns:1.1fr .9fr;gap:56px}
+.contact h2{font-size:clamp(32px,4.4vw,56px);font-weight:900;text-transform:uppercase}
+.contact p{color:color-mix(in srgb,var(--surNuit) 72%,transparent);margin-top:18px;font-size:18px}
+.contact dl{margin:0;display:grid;gap:0}
+.contact dl div{padding:18px 0;border-bottom:1px solid color-mix(in srgb,var(--surNuit) 18%,transparent);display:grid;gap:4px}
+.contact dt{font-family:var(--f-fiche);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:color-mix(in srgb,var(--surNuit) 60%,transparent)}
+.contact dd{margin:0;font-size:19px;font-weight:600;user-select:all}
+.contact .cp{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.contact .cp button{font:600 12px var(--f-texte);padding:7px 12px;border-radius:8px;border:1px solid color-mix(in srgb,var(--surNuit) 30%,transparent);background:none;color:var(--surNuit);cursor:pointer;user-select:none}
+footer{background:var(--nuit);color:color-mix(in srgb,var(--surNuit) 60%,transparent);font-size:13.5px}
+footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding-block:22px;border-top:1px solid color-mix(in srgb,var(--surNuit) 14%,transparent)}
+
+@media (prefers-reduced-motion:no-preference){
+  .ouv h1 .l{display:block;animation:monte .9s cubic-bezier(.2,.8,.2,1) both}
+  .ouv h1 .l:nth-child(2){animation-delay:.08s}.ouv h1 .l:nth-child(3){animation-delay:.16s}
+  @keyframes monte{from{transform:translateY(.35em);opacity:.0001}to{transform:none;opacity:1}}
+  .crete path{stroke-dasharray:3000;stroke-dashoffset:3000;animation:trace 2.6s .3s cubic-bezier(.45,0,.2,1) forwards}
+  @keyframes trace{to{stroke-dashoffset:0}}
+}
+@media (max-width:960px){
+  nav{display:none} .burger{display:inline-flex;margin-left:auto;background:none;border:1.5px solid var(--encre);color:var(--encre);border-radius:8px;padding:8px 12px;font:600 14px var(--f-texte)}
+  header.ouvert nav{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--papier);border-bottom:1px solid var(--trait);padding:8px max(20px,env(safe-area-inset-left,0px)) 14px}
+  header .bt.jed{display:none}
+  .ouv .g,.qui .g,.jedb .w,.contact .g{grid-template-columns:1fr;gap:36px}
+  .ouv .photo{max-height:none;aspect-ratio:4/3.4;margin-left:14px;width:auto}
+  .ouv .photo figcaption{display:none}
+  .rdv{right:0;left:10px;bottom:-40px;padding:12px 14px 12px 12px;gap:12px} .rdv img{width:70px} .rdv b{font-size:16px}
+  .ouv .crete{margin-top:64px}
+  .fr{grid-template-columns:1fr;overflow:visible}
+  .fr::before{left:6px;right:auto;top:8px;bottom:8px;width:2px;height:auto}
+  .fr li{min-width:0;padding:0 0 26px 36px}
+  .fr .an{height:auto;font-size:28px;margin-bottom:8px}
+  .fr .pt{position:absolute;left:0;top:7px;margin:0}
+  .chiffres .w{grid-template-columns:1fr 1fr}
+  .chiffres .w>div:nth-child(3){padding-left:0;border-left:0}
+  .chiffres .w>div:nth-child(n+3){border-top:1px solid var(--trait)}
+  .axe{grid-template-columns:1fr;gap:16px;padding:24px}
+  .axe .n{font-size:64px}
+  .axe .photo{aspect-ratio:16/9}
+  .prix{grid-template-columns:1fr}
+  .mos{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+  section{padding-block:72px}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .logo small{display:none}
+  .chiffres .w>div{padding:20px 12px 18px 0} .chiffres .w>div+div{padding-left:12px}
+  .prix article{grid-template-columns:1fr;gap:10px;padding:22px}
+  .jedb li{grid-template-columns:1fr;gap:2px}
+  .duo .photo:last-child{margin-top:28px}
+}
+</style>
+
+</head>
+<body>
+<a class="annonce" href="https://kouakoukouabenan-blip.github.io/jed2026/" target="_blank" rel="noopener">
+  <span class="w"><b>JED 2026</b><span class="sep"></span>Du 3 au 5 décembre à Man<span class="sep"></span><span class="jm" data-jm>J − 15</span><span class="go">Voir le programme <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></span>
+</a>
+<header id="hd">
+  <div class="w">
+    <a class="logo" href="#top" aria-label="Accueil UJDM"><img src="img/ujdm.png" alt="Logo UJDM"><span>UJDM<small>Union des Jeunes Dynamiques de Man</small></span></a>
+    <nav id="nav">
+      <a href="#qui">Qui sommes-nous</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#axes">Nos actions</a>
+      <a href="#jed">JED 2026</a>
+      <a href="#images">En images</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav">Menu</button>
+    <a class="bt jed" href="https://kouakoukouabenan-blip.github.io/jed2026/" target="_blank" rel="noopener">JED 2026 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="ouv">
+    <div class="w">
+      <div class="g">
+        <div>
+          <div class="fiche"><span class="tri"><i></i><i></i><i></i></span>Man · Région du Tonkpi · Côte d'Ivoire</div>
+          <h1><span class="l">Une jeunesse</span><span class="l">qui prend sa</span><span class="l"><em>place.</em></span></h1>
+          <p class="chapo">Depuis 2019, l'Union des Jeunes Dynamiques de Man forme, accompagne et rassemble les jeunes pour qu'ils deviennent responsables, autonomes et acteurs du développement durable.</p>
+          <div class="ctas">
+            <a class="bt jed" href="#jed">Découvrir les JED 2026</a>
+            <a class="bt clair" href="#qui">Qui sommes-nous</a>
+          </div>
+        </div>
+        <figure class="photo">
+          <img src="img/cercle.webp" alt="Des jeunes de l'UJDM en cercle, photographiés depuis le sol, tête penchée vers l'objectif" width="736" height="981">
+          <figcaption class="fiche">Semaine du Dynamisme · Man</figcaption>
+          <a class="rdv" href="#jed">
+            <img src="img/jed-blanc.png" alt="JED" width="1000" height="460">
+            <span><small>Prochain rendez-vous</small><b>3 · 4 · 5 décembre 2026</b><em><span data-jm>J − 15</span> · 500 jeunes attendus à Man</em></span>
+          </a>
+        </figure>
+      </div>
+    </div>
+    <svg class="crete" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 108 L120 104 L210 96 L270 98 L330 84 L380 88 L430 72 L470 76 L505 54 L528 58 L548 22 L566 14 L584 20 L600 44 L622 50 L650 40 L690 62 L740 70 L790 66 L840 82 L900 86 L960 96 L1040 100 L1120 106 L1200 108" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>
+  </div>
+
+  <div class="chiffres">
+    <div class="w">
+      <div><b>650+</b><span>jeunes réunis lors des deux premières éditions</span></div>
+      <div><b>2021</b><span>reconnaissance officielle de l'association</span></div>
+      <div><b>2</b><span>distinctions nationales reçues en 2025</span></div>
+      <div><b>3</b><span>axes d'action, de l'emploi à l'environnement</span></div>
+    </div>
+  </div>
+
+  <section class="jedb" id="jed">
+    <div class="w">
+      <div>
+        <img class="lg" src="img/jed-blanc.png" alt="Logo des JED" width="1000" height="460">
+        <div class="fiche" style="margin-top:26px">Notre grand rendez-vous</div>
+        <h2>Journées de l'Engagement et du Dynamisme</h2>
+        <p class="theme">« Entreprendre, s'employer et s'épanouir pour un avenir durable »</p>
+        <div class="info">
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>3, 4 et 5 décembre 2026</span>
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Man, Région du Tonkpi</span>
+          <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.3-5.5 6.5-5.5s5.7 1.9 6.5 5.5M16 4.6a3.5 3.5 0 0 1 0 6.8M18.5 14.8c1.7.7 2.7 2.4 3 5.2"/></svg>500 jeunes attendus</span>
+        </div>
+        <div class="ctas">
+          <a class="bt" href="https://kouakoukouabenan-blip.github.io/jed2026/" target="_blank" rel="noopener">Ouvrir le programme</a>
+          <a class="bt o" href="https://kouakoukouabenan-blip.github.io/jed2026/" target="_blank" rel="noopener">Créer mon visuel « J'y serai »</a>
+        </div>
+      </div>
+      <ul>
+        <li><b>Jeu. 3 déc.</b><span>Cérémonie d'ouverture, panel sur le thème principal, puis ateliers Entrepreneuriat et Employabilité.</span></li>
+        <li><b>Ven. 4 déc.</b><span>Suite des ateliers, session commune sur la santé mentale des jeunes, mentorat et réseautage.</span></li>
+        <li><b>Sam. 5 déc.</b><span>Concours de pitchs des 6 équipes finalistes, cérémonie de clôture et Soirée de l'Engagement.</span></li>
+      </ul>
+    </div>
+    <div class="bande" aria-hidden="true"><i style="background:var(--orange)"></i><i style="background:#fff"></i><i style="background:var(--vert)"></i></div>
+  </section>
+
+  <section class="qui" id="qui">
+    <div class="w g">
+      <div>
+        <div class="fiche" style="margin-bottom:18px">Qui sommes-nous</div>
+        <p class="lead">Nous rassemblons des jeunes femmes et des jeunes hommes autour d'une conviction simple : <strong>le développement de Man passe par sa jeunesse.</strong></p>
+        <div class="duo">
+          <figure class="photo"><img src="img/parole.webp" alt="Une participante prend la parole au micro pendant un échange" loading="lazy"></figure>
+          <figure class="photo"><img src="img/portrait.webp" alt="Un jeune participant concentré devant son ordinateur" loading="lazy"></figure>
+        </div>
+      </div>
+      <div class="txt">
+        <p>Créée le 21 décembre 2019 et officiellement légalisée le 7 mai 2021, l'Union des Jeunes Dynamiques de Man (UJDM) est une organisation de jeunesse basée à Man, dans la région du Tonkpi.</p>
+        <p>Elle œuvre pour le renforcement des capacités des jeunes, la promotion de l'entrepreneuriat, de l'éducation, du leadership citoyen, de l'égalité des chances et de la protection de l'environnement.</p>
+        <p>À travers ses actions, elle favorise la participation active des jeunes au développement de leurs communautés et encourage l'émergence d'initiatives innovantes qui répondent aux défis sociaux, économiques et environnementaux.</p>
+        <figure class="photo" style="aspect-ratio:16/10;margin-top:18px"><img src="img/salle.webp" alt="Une salle pleine de jeunes participants lors d'une session de l'UJDM" loading="lazy"><figcaption class="fiche">Session de travail</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="frise" id="parcours">
+    <div class="w">
+      <div class="tete"><h2>Notre parcours</h2><p>Six dates qui racontent l'UJDM.</p></div>
+      <ol class="fr">
+        <li><span class="an">2019</span><span class="pt"></span><b>Naissance de l'UJDM</b><small>Le 21 décembre, à Man.</small></li>
+        <li><span class="an">2021</span><span class="pt"></span><b>Reconnaissance officielle</b><small>Légalisation de l'association le 7 mai.</small></li>
+        <li><span class="an">2023</span><span class="pt"></span><b>1ʳᵉ Semaine du Dynamisme</b><small>Plus de 150 jeunes réunis à Man autour du leadership et de l'engagement communautaire.</small></li>
+        <li><span class="an">2024</span><span class="pt"></span><b>La montée en puissance</b><small>Les 20 et 21 décembre, plus de 500 jeunes leaders venus d'Abidjan, Bouaké, Daloa, Yamoussoukro, Man et Kouitongouné.</small></li>
+        <li><span class="an">2025</span><span class="pt"></span><b>Deux distinctions nationales</b><small>2ᵉ Prix National d'Excellence et Prix Éducation et Formation.</small></li>
+        <li><span class="an">2026</span><span class="pt"></span><b>Les JED 2026</b><small>La rencontre devient les Journées de l'Engagement et du Dynamisme, du 3 au 5 décembre.</small></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="axes">
+    <div class="w">
+      <div class="tete"><h2>Nos actions</h2><p>Nos programmes s'articulent autour de trois axes stratégiques.</p></div>
+      <div class="axes">
+        <article class="axe r">
+          <span class="n">1</span>
+          <div><h3>Employabilité et entrepreneuriat des jeunes</h3><p>Formations, ateliers pratiques, mentorat et mise en relation avec les recruteurs, pour aider les jeunes à trouver un emploi ou à créer le leur.</p></div>
+          <figure class="photo"><img src="img/atelier.webp" alt="Atelier de formation, des jeunes travaillent sur leurs ordinateurs" loading="lazy"></figure>
+        </article>
+        <article class="axe b">
+          <span class="n">2</span>
+          <div><h3>Filles et femmes, genre et droits humains</h3><p>L'autonomisation des filles et des femmes, la promotion de l'égalité des chances et la défense des droits humains.</p></div>
+          <figure class="photo"><img src="img/remise.webp" alt="Des jeunes femmes et hommes reçoivent leurs attestations" loading="lazy"></figure>
+        </article>
+        <article class="axe v">
+          <span class="n">3</span>
+          <div><h3>Environnement et développement communautaire</h3><p>La protection de l'environnement et des actions concrètes au service des communautés de Man et du Tonkpi.</p></div>
+          <figure class="photo"><img src="img/repas.webp" alt="Des jeunes partagent un repas en plein air sous les arbres" loading="lazy"></figure>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="prix">
+    <div class="w">
+      <div class="tete"><h2>Distinctions</h2><p>En 2025, deux reconnaissances nationales pour notre travail.</p></div>
+      <div class="prix">
+        <article><span class="rg">2<sup>e</sup></span><div><h3>Prix National d'Excellence de la Meilleure Organisation de Jeunesse</h3><p>Une distinction qui salue l'engagement de l'UJDM et la qualité de ses interventions.</p></div></article>
+        <article><span class="rg" style="color:var(--vert)">★</span><div><h3>Prix Éducation et Formation</h3><p>Reçu lors du concours Impact Jeunes organisé par le Conseil National des Jeunes de Côte d'Ivoire (CNJCI).</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="images" style="padding-top:0">
+    <div class="w">
+      <div class="tete"><h2>En images</h2><p>Nos dernières rencontres, à Man.</p></div>
+      <div class="mos">
+        <figure class="photo grand"><img src="img/orateur.webp" alt="Un intervenant anime une session sur le leadership devant un public de jeunes" loading="lazy"></figure>
+        <figure class="photo haut"><img src="img/cadre.webp" alt="Une participante pose dans le cadre photo de la Semaine du Dynamisme" loading="lazy"></figure>
+        <figure class="photo haut"><img src="img/pensif.webp" alt="Participantes attentives pendant une conférence, en noir et blanc" loading="lazy"></figure>
+        <figure class="photo"><img src="img/expose.webp" alt="Deux jeunes présentent leur projet devant le public" loading="lazy"></figure>
+        <figure class="photo"><img src="img/studio.webp" alt="Un participant pendant un atelier" loading="lazy"></figure>
+        <figure class="photo large"><img src="img/remise.webp" alt="Remise d'attestations aux participants" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="part">
+    <div class="w">
+      <div class="fiche" style="margin-bottom:18px">Ils nous accompagnent</div>
+      <div class="l">
+        <div><img src="img/ministere.png" alt="Ministère de la Promotion de la Jeunesse, de l'Insertion professionnelle et du Service civique" loading="lazy"></div>
+        <div><img src="img/commune.png" alt="Commune de Man" loading="lazy"></div>
+        <div><img src="img/cnjci.png" alt="Conseil National des Jeunes de Côte d'Ivoire" loading="lazy"></div>
+        <div><img src="img/alliance.png" alt="Alliance Jeunesse Côte d'Ivoire" loading="lazy"></div>
+        <div><span class="atk">ATiKAN</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="contact" id="contact">
+    <div class="w g">
+      <div>
+        <h2>Agir avec nous</h2>
+        <p>Institutions, entreprises, organisations de la société civile, partenaires techniques et financiers : rejoignez-nous pour faire émerger une nouvelle génération de leaders, d'entrepreneurs et d'acteurs du changement.</p>
+        <p>Jeune de Man ou du Tonkpi, vous voulez vous engager ? Écrivez-nous ou appelez-nous.</p>
+      </div>
+      <dl>
+        <div><dt>Siège</dt><dd>Man, quartier Houphouët-Ville · Région du Tonkpi, Côte d'Ivoire</dd></div>
+        <div><dt>E-mail</dt><dd class="cp"><span>ujdminfo@gmail.com</span><button type="button" data-c="ujdminfo@gmail.com">Copier</button></dd></div>
+        <div><dt>Téléphone</dt><dd class="cp"><span>+225 07 08 74 79 86</span><button type="button" data-c="+225 07 08 74 79 86">Copier</button></dd></div>
+        <div><dt>Téléphone</dt><dd class="cp"><span>+225 07 67 69 55 18</span><button type="button" data-c="+225 07 67 69 55 18">Copier</button></dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+<footer><div class="w"><span>© 2026 Union des Jeunes Dynamiques de Man</span><span>Site réalisé par ATIKAN</span></div></footer>
+
+<script>
+(function(){ const d=Math.ceil((new Date('2026-12-03T08:00:00Z')-new Date())/864e5);
+  const t=d>1?'J − '+d:d===1?'Demain':(new Date()<new Date('2026-12-06T00:00:00Z')?'En ce moment':'Merci !');
+  document.querySelectorAll('[data-jm]').forEach(e=>e.textContent=t); })();
+const hd=document.getElementById('hd'), bg=document.getElementById('burger');
+bg.addEventListener('click',()=>{ const o=hd.classList.toggle('ouvert'); bg.setAttribute('aria-expanded',o); bg.textContent=o?'Fermer':'Menu'; });
+document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>{ hd.classList.remove('ouvert'); bg.setAttribute('aria-expanded','false'); bg.textContent='Menu'; }));
+document.querySelectorAll('[data-c]').forEach(b=>b.addEventListener('click',async()=>{
+  try{ await navigator.clipboard.writeText(b.dataset.c); b.textContent='Copié'; }
+  catch(e){ const r=document.createRange(); r.selectNodeContents(b.previousElementSibling); const s=getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent='Sélectionné'; }
+  setTimeout(()=>b.textContent='Copier',1800);
+}));
+</script>
+
+</body>
+</html>
