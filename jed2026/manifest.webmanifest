@@ -1,0 +1,15 @@
+{
+  "name": "JED 2026 — Journées de l'Engagement et du Dynamisme",
+  "short_name": "JED 2026",
+  "description": "Programme, informations, galerie et contacts des JED 2026 — Man, 3 au 5 décembre 2026.",
+  "lang": "fr", "dir": "ltr",
+  "start_url": "./", "scope": "./",
+  "display": "standalone", "orientation": "portrait",
+  "background_color": "#235CA6", "theme_color": "#235CA6",
+  "categories": ["education", "social", "productivity"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
