@@ -81,5 +81,106 @@ if(document.getElementById('bio')){
   } else { document.querySelectorAll('.rv').forEach(el=>el.classList.add('vu')); fill(); }
 
   document.querySelectorAll('[data-c]').forEach(b=>b.addEventListener('click',async()=>{ try{ await navigator.clipboard.writeText(b.dataset.c); b.textContent='Copié'; }catch(e){ const r=document.createRange(); r.selectNodeContents(b.previousElementSibling); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent='Sélectionné'; } setTimeout(()=>b.textContent='Copier',1800); }));
+
+  /* J'y serai : cadre photo */
+  if(document.getElementById('cadC')){
+    const C=document.getElementById('cadC'), X=C.getContext('2d'), S=1080/640, CX=483*S, CY=267*S, R=109*S;
+    const st={img:null,z:1,x:0,y:0}, fr=new Image(), ok=document.getElementById('cadOk'), zr=document.getElementById('zr'), zi=document.getElementById('cadZ');
+    fr.onload=()=>draw(); fr.src='img/cadre-jed2026.webp';
+    const msg=t=>{ ok.textContent=t; clearTimeout(msg.t); msg.t=setTimeout(()=>ok.textContent='',3000); };
+    function draw(){
+      X.clearRect(0,0,1080,1080); X.fillStyle='#1F1F1F'; X.beginPath(); X.arc(CX,CY,R,0,7); X.fill();
+      if(st.img){ const i=st.img, sc=Math.max(2*R/i.width,2*R/i.height)*st.z, w=i.width*sc, h=i.height*sc;
+        const mx=Math.max(0,(w-2*R)/2), my=Math.max(0,(h-2*R)/2); st.x=Math.max(-mx,Math.min(mx,st.x)); st.y=Math.max(-my,Math.min(my,st.y));
+        X.save(); X.beginPath(); X.arc(CX,CY,R,0,7); X.clip(); X.drawImage(i,CX-w/2+st.x,CY-h/2+st.y,w,h); X.restore(); }
+      else { X.fillStyle='rgba(255,255,255,.8)'; X.font='600 28px Montserrat,Arial,sans-serif'; X.textAlign='center'; X.fillText('Votre photo ici',CX,CY+10); }
+      if(fr.complete&&fr.naturalWidth) X.drawImage(fr,0,0,1080,1080);
+    }
+    const pick=e=>{ const f=e.target.files[0]; e.target.value=''; if(!f) return;
+      const im=new Image(); im.onload=()=>{ st.img=im; st.z=1; st.x=0; st.y=0; zi.value=1; zr.hidden=false;
+        document.getElementById('cadD').disabled=false; document.getElementById('cadS').disabled=false; draw(); }; im.src=URL.createObjectURL(f); };
+    document.getElementById('cadF').addEventListener('change',pick); document.getElementById('cadCam').addEventListener('change',pick);
+    zi.addEventListener('input',()=>{ st.z=+zi.value; draw(); });
+    const k=()=>1080/C.getBoundingClientRect().width;
+    const inC=(px,py)=>{ const r=C.getBoundingClientRect(), q=1080/r.width, dx=(px-r.left)*q-CX, dy=(py-r.top)*q-CY; return dx*dx+dy*dy<=(R*1.08)**2; };
+    const dist=t=>Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);
+    let T=null;
+    C.addEventListener('touchstart',e=>{ if(!st.img){ T=null; return; } const t=e.touches;
+      if(t.length===1){ if(!inC(t[0].clientX,t[0].clientY)){ T=null; return; } T={x:t[0].clientX,y:t[0].clientY}; }
+      else if(t.length===2){ T={d:dist(t),z:st.z}; }
+      e.preventDefault(); },{passive:false});
+    C.addEventListener('touchmove',e=>{ if(!T) return; e.preventDefault(); const t=e.touches;
+      if(t.length===1&&T.x!==undefined){ st.x+=(t[0].clientX-T.x)*k(); st.y+=(t[0].clientY-T.y)*k(); T.x=t[0].clientX; T.y=t[0].clientY; }
+      else if(t.length===2&&T.d){ st.z=Math.max(1,Math.min(3,T.z*dist(t)/T.d)); zi.value=st.z; }
+      draw(); },{passive:false});
+    C.addEventListener('touchend',e=>{ const t=e.touches; if(!T) return; if(t.length===0) T=null; else if(t.length===1) T={x:t[0].clientX,y:t[0].clientY}; });
+    let M=null;
+    C.addEventListener('pointerdown',e=>{ if(e.pointerType!=='mouse'||!st.img||!inC(e.clientX,e.clientY)) return; M={x:e.clientX,y:e.clientY}; C.setPointerCapture(e.pointerId); C.style.cursor='grabbing'; });
+    C.addEventListener('pointermove',e=>{ if(!M) return; st.x+=(e.clientX-M.x)*k(); st.y+=(e.clientY-M.y)*k(); M={x:e.clientX,y:e.clientY}; draw(); });
+    C.addEventListener('pointerup',()=>{ M=null; C.style.cursor=''; });
+    C.addEventListener('wheel',e=>{ if(!st.img||!inC(e.clientX,e.clientY)) return; e.preventDefault(); st.z=Math.max(1,Math.min(3,st.z-e.deltaY*.002)); zi.value=st.z; draw(); },{passive:false});
+    const blob=cb=>C.toBlob(cb,'image/jpeg',.93);
+    const save=()=>blob(b=>{ const a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download='JED2026-jy-serai.jpg'; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(a.href),4000); msg('Votre visuel est enregistré.'); });
+    document.getElementById('cadD').addEventListener('click',save);
+    document.getElementById('cadS').addEventListener('click',()=>blob(async b=>{ const f=new File([b],'JED2026-jy-serai.jpg',{type:'image/jpeg'});
+      if(navigator.canShare&&navigator.canShare({files:[f]})){ try{ await navigator.share({files:[f],text:"J'y serai ! JED 2026 à Man, du 3 au 5 décembre. #JED2026"}); }catch(e){} } else save(); }));
+    draw(); if(document.fonts) document.fonts.ready.then(draw);
+  }
+
+  /* galerie */
+  if(document.getElementById('mos')){
+    const EP='https://script.google.com/macros/s/AKfycbwDlIOM3Frm892PR00P0BzTvkGxzR5pyx_xd_EIc7uL71fyx0TUXzhbAu9ruRMAHPCR/exec';
+    const LOC=['orateur','parole','remise','atelier','pensif','salle','cercle','expose','cadre','studio','repas','portrait'].map(n=>({th:'img/'+n+'.webp',full:'img/'+n+'.webp',loc:1}));
+    const mos=document.getElementById('mos'), albs=document.getElementById('albs'), galT=document.getElementById('galT'), note=document.getElementById('gnote');
+    const isV=f=>/^video\//.test(f.mimeType||'');
+    const nom=a=>a.replace(/^\s*\d+\s*[.\-)]\s*/,'').replace(/\s*[-–]\s*JED\s*2026\s*$/i,'').trim()||a;
+    const dans=(f,a)=>f.album===a||(f.album||'').startsWith(a+' › ');
+    const item=f=>({id:f.id,vid:isV(f),album:f.album||'',th:'https://drive.google.com/thumbnail?id='+f.id+'&sz=w600',full:'https://drive.google.com/thumbnail?id='+f.id+'&sz=w2000'});
+    let G=null, A='', L=[], I=0;
+    const titre=(t,n)=>'<div class="galh"><h2>'+t+'</h2><small>'+n+'</small></div>';
+    function grille(items){ L=items;
+      mos.innerHTML=items.map((f,n)=>'<button type="button" class="'+(n%7===0&&items.length>4?'gr':'')+'" data-i="'+n+'"><img loading="lazy" src="'+f.th+'" alt="">'+(f.vid?'<span class="pl"></span>':'')+'</button>').join('');
+      mos.querySelectorAll('button').forEach(b=>b.onclick=()=>ouvre(+b.dataset.i)); }
+    function local(t){ albs.innerHTML=''; galT.innerHTML=titre('Précédentes rencontres de l\'UJDM',LOC.length+' photos'); grille(LOC); note.textContent=t; }
+    function rendu(){
+      const top=(G.albums||[]).filter(a=>a.indexOf(' › ')<0&&G.files.some(f=>dans(f,a)));
+      if(A){ albs.innerHTML='<button class="retour" type="button" id="rt"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>Tous les albums</button>';
+        document.getElementById('rt').onclick=()=>{ A=''; rendu(); scrollTo({top:albs.getBoundingClientRect().top+scrollY-120}); }; }
+      else if(top.length){ albs.innerHTML=titre('Les albums',top.length+' album'+(top.length>1?'s':''))+'<div class="albs">'+top.map(a=>{ const fs=G.files.filter(f=>dans(f,a)), ph=fs.find(f=>!isV(f))||fs[0];
+          return '<button type="button" data-a="'+a.replace(/"/g,'&quot;')+'">'+(ph?'<img loading="lazy" src="https://drive.google.com/thumbnail?id='+ph.id+'&sz=w700" alt="">':'')+'<span><b></b><small>'+fs.length+' élément'+(fs.length>1?'s':'')+'</small></span></button>'; }).join('')+'</div>';
+        albs.querySelectorAll('.albs button').forEach(b=>{ b.querySelector('b').textContent=nom(b.dataset.a); b.onclick=()=>{ A=b.dataset.a; rendu(); scrollTo({top:albs.getBoundingClientRect().top+scrollY-120}); }; }); }
+      else albs.innerHTML='';
+      const fs=G.files.filter(f=>!A||dans(f,A)), nP=fs.filter(f=>!isV(f)).length, nV=fs.length-nP;
+      galT.innerHTML=titre(A?nom(A):'Toutes les photos',[nP?nP+' photo'+(nP>1?'s':''):'',nV?nV+' vidéo'+(nV>1?'s':''):''].filter(Boolean).join(' · '));
+      grille(fs.map(item)); note.textContent='';
+    }
+    (async()=>{ try{ const r=await fetch(EP,{cache:'no-store'}), j=await r.json();
+        const fs=(j.files||j||[]).filter(f=>!f.mimeType||/^(image|video)\//.test(f.mimeType));
+        if(!fs.length){ local('Les photos des JED 2026 seront publiées ici pendant l\'événement.'); return; }
+        for(let i=fs.length-1;i>0;i--){ const k=Math.floor(Math.random()*(i+1)); [fs[i],fs[k]]=[fs[k],fs[i]]; }
+        G={files:fs,albums:j.albums||[]}; rendu();
+      }catch(e){ local('Les photos des JED 2026 seront publiées ici pendant l\'événement.'); } })();
+    const lb=document.getElementById('lb'), li=document.getElementById('lbi'), lv=document.getElementById('lbv'), ld=document.getElementById('lbd');
+    function montre(){ const f=L[I];
+      if(f.vid){ li.style.display='none'; lv.style.display='block'; lv.src='https://drive.google.com/file/d/'+f.id+'/preview'; }
+      else { lv.style.display='none'; lv.src='about:blank'; li.style.display=''; li.src=f.th; const h=new Image(); h.onload=()=>{ if(L[I]===f) li.src=f.full; }; h.src=f.full; }
+      ld.href=f.loc?f.full:'https://drive.google.com/uc?export=download&id='+f.id; ld.setAttribute('download','JED2026-'+(I+1)+(f.vid?'.mp4':'.jpg'));
+      document.getElementById('lbn').textContent=(I+1)+' / '+L.length+(f.album?' · '+nom(f.album.split(' › ')[0]):'');
+      const m=L.length>1; document.getElementById('lbp').style.display=m?'':'none'; document.getElementById('lbq').style.display=m?'':'none'; }
+    function ouvre(i){ I=i; montre(); lb.classList.add('on'); document.body.style.overflow='hidden'; }
+    function ferme(){ lb.classList.remove('on'); lv.src='about:blank'; document.body.style.overflow=''; }
+    function pas(d){ if(L.length<2) return; li.style.opacity='0'; li.style.transform='translateX('+(-d*40)+'px)';
+      setTimeout(()=>{ I=(I+d+L.length)%L.length; montre(); li.style.transition='none'; li.style.transform='translateX('+(d*40)+'px)';
+        requestAnimationFrame(()=>requestAnimationFrame(()=>{ li.style.transition=''; li.style.opacity='1'; li.style.transform='none'; })); },200); }
+    document.getElementById('lbx').onclick=ferme; document.getElementById('lbp').onclick=()=>pas(-1); document.getElementById('lbq').onclick=()=>pas(1);
+    document.getElementById('lbm').addEventListener('click',e=>{ if(e.target.id==='lbm') ferme(); });
+    addEventListener('keydown',e=>{ if(!lb.classList.contains('on')) return; if(e.key==='Escape') ferme(); if(e.key==='ArrowLeft') pas(-1); if(e.key==='ArrowRight') pas(1); });
+    let x0=null; lb.addEventListener('touchstart',e=>{ x0=e.touches.length===1?e.touches[0].clientX:null; },{passive:true});
+    lb.addEventListener('touchend',e=>{ if(x0===null) return; const dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>50) pas(dx<0?1:-1); x0=null; });
+    document.getElementById('lbs').onclick=async()=>{ const f=L[I], u=f.loc?new URL(f.full,location.href).href:'https://drive.google.com/file/d/'+f.id+'/view';
+      if(navigator.share){ try{ await navigator.share({title:'JED 2026',text:'Une photo des JED 2026 #JED2026',url:u}); }catch(e){} }
+      else { try{ await navigator.clipboard.writeText(u); document.getElementById('lbs').textContent='Lien copié'; setTimeout(()=>document.getElementById('lbs').textContent='Partager',1800); }catch(e){} } };
+  }
+
   if(location.hash){ const el=document.getElementById(location.hash.slice(1)); if(el) setTimeout(()=>el.scrollIntoView(),80); }
 })();
