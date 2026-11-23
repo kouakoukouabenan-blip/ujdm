@@ -465,20 +465,20 @@ nav button.spacer{pointer-events:none;opacity:0}
       <p style="margin-bottom:10px">Les participants sont répartis en deux groupes. Chaque groupe suit son parcours le jeudi après-midi et le vendredi matin ; tout le monde se retrouve le vendredi après-midi pour la session sur la santé mentale.</p>
       <div class="card b">
         <span class="tag A">Groupe 1 · Salle A</span>
-        <h3>Entrepreneuriat selon le modèle Junior Achievement</h3>
-        <p>En équipes de 5 à 6, vous passez de l'idée au pitch : idéation, Business Model Canvas, prototype léger, executive summary. Une présélection retient 6 équipes finalistes pour le concours du samedi.</p>
+        <h3>Entrepreneuriat · module JA DEEP</h3>
+        <p>En équipes de 5 à 6, vous passez de l'idée au pitch : idéation, Business Model Canvas, prototype léger, executive summary. Les finalistes sont coachés le vendredi après-midi avant le concours du samedi.</p>
         <div class="liv"><span>Une idée de projet</span><span>Un BMC simplifié</span><span>Un prototype léger</span><span>Un executive summary d'une page</span><span>Un pitch répété</span></div>
       </div>
       <div class="card v">
         <span class="tag B">Groupe 2 · Salle B</span>
-        <h3>Employabilité et compétences du XXIᵉ siècle</h3>
+        <h3>Employabilité · module Success Skills</h3>
         <p>De la connaissance de soi à un plan d'action : compétences du XXIᵉ siècle, projet professionnel, marché de l'emploi, CV, entretien d'embauche.</p>
         <div class="liv"><span>Un auto-diagnostic de vos compétences</span><span>Un CV amélioré</span><span>Un entretien simulé</span><span>Un plan d'action personnel</span></div>
       </div>
       <div class="card o">
         <span class="tag C">Tous · Grande salle</span>
         <h3>Session commune : santé mentale des jeunes</h3>
-        <p>Vendredi 4 décembre, 14h00 – 16h30. Reconnaître les signes de souffrance psychique, gérer le stress de l'insertion et de l'entrepreneuriat, savoir où chercher de l'aide.</p>
+        <p>Vendredi 4 décembre, 13h30 – 15h15, en plénière. Reconnaître les signes de souffrance psychique, gérer le stress de l'insertion et de l'entrepreneuriat, savoir où chercher de l'aide.</p>
         <div class="liv"><span>Des stratégies face au stress</span><span>Une fiche ressources</span></div>
         <p class="note">Des référents restent disponibles après la session pour ceux qui souhaitent en parler individuellement.</p>
       </div>
@@ -486,13 +486,13 @@ nav button.spacer{pointer-events:none;opacity:0}
       <h2 style="margin-top:18px">L'équipe pédagogique</h2>
       <div class="card">
         <div class="team"><div class="av" style="background:var(--bleu)">DK</div><div><b>Dr Katio</b><small>Formateur · Entrepreneuriat (modèle JA) · Salle A</small></div></div>
-        <div class="team"><div class="av" style="background:var(--vert)">B</div><div><b>Boris</b><small>Chargé de programme, Youth Education · Employabilité · Salle B</small></div></div>
-        <div class="team"><div class="av" style="background:var(--orange)">I</div><div><b>Ipoté</b><small>Formateur · Santé mentale des jeunes · Grande salle</small></div></div>
+        <div class="team"><div class="av" style="background:var(--vert)">BK</div><div><b>Boris Koffi</b><small>Expert en Soft Skills et Employabilité · Salle B</small></div></div>
+        <div class="team"><div class="av" style="background:var(--orange)">IA</div><div><b>Ipote Djridjehe Anderson</b><small>Responsable Suivi-Évaluation à l'UJDM · Santé mentale · Grande salle</small></div></div>
       </div>
 
       <div class="card v">
         <h3>Concours national de l'innovation et de l'entrepreneuriat</h3>
-        <p>Samedi 5 décembre, 10h00 – 11h00 : les 6 équipes finalistes présentent leur projet devant un jury d'experts, d'institutions et d'investisseurs (3 min de pitch, 5 min de questions). Les prix sont remis lors de la cérémonie de clôture. Les projets retenus bénéficient d'un accompagnement de 6 à 12 mois : appui technique, mentorat, mise en relation avec des structures de financement.</p>
+        <p>Samedi 5 décembre, 09h30 – 12h00 : les finalistes présentent leur projet devant un jury international, suivi de questions-réponses, avec un temps de parole identique pour chaque candidat. Les prix sont remis lors de la cérémonie de clôture. Les projets retenus bénéficient d'un accompagnement de 6 à 12 mois : appui technique, mentorat, mise en relation avec des structures de financement.</p>
       </div>
       <div class="card">
         <h3>Ce que le jury regarde</h3>
@@ -847,52 +847,29 @@ requestAnimationFrame(()=>{ movePill(); countUp(); watch(); });
 /* t : '' = pour tous ; 'A' / 'B' = parcours ; tracks : détail par salle */
 const PROG=[
  {j:'Jeudi', d:'3 déc.', date:'2026-12-03', items:[
-  {h:'08h00 – 09h00', t:'Arrivée et inscription des participants'},
-  {h:'09h00 – 11h00', t:'Cérémonie officielle d\'ouverture', big:1, d:'Accueil des autorités au tam-tam du peuple Dan ; allocutions des autorités de Man ; présentation du programme et briefing sécurité ; slam sur la situation des jeunes ; mots des partenaires ; performance culturelle ; allocution du pays invité ; allocution du président du conseil d\'administration de l\'UJDM ; photo de famille.'},
-  {h:'11h15 – 12h15', t:'Panel du thème principal', d:'Entreprendre, S\'employer et S\'épanouir pour un Avenir Durable.'},
-  {h:'12h15 – 14h00', t:'Pause déjeuner libre'},
-  {h:'14h00 – 16h30', t:'Ateliers de formation · Jour 1', tracks:[
-    {k:'A', titre:'Entrepreneuriat : fondamentaux et idéation', who:'Dr Katio · Salle A', ss:[
-      ['14h00 – 14h15','Cadrage : objectifs, déroulé, concours de samedi'],
-      ['14h15 – 14h55','S1 · Comprendre l\'entrepreneuriat : posture, profil de l\'entrepreneur, approche JA, écosystème local'],
-      ['14h55 – 16h00','S2 · Idéation et opportunités durables (problèmes locaux, ODD), constitution des équipes','Idée retenue'],
-      ['16h00 – 16h30','S3 · Formulation de l\'idée et introduction au BMC','Fiche « idée de projet »']]},
-    {k:'B', titre:'Employabilité : compétences et connaissance de soi', who:'Boris · Salle B', ss:[
-      ['14h00 – 14h15','Cadrage : objectifs et déroulé'],
-      ['14h15 – 15h15','S1 · Les compétences du XXIᵉ siècle : pensée critique, créativité, communication, collaboration, compétences numériques','Grille d\'auto-diagnostic'],
-      ['15h15 – 16h30','S2 · Connaissance de soi et projet professionnel : atouts, valeurs, pistes de métiers','Fiche projet professionnel']]}]},
-  {h:'16h30 – 17h00', t:'Débriefing du jour 1'}]},
+  {h:'08h00 – 09h00', t:'Arrivée, accueil et inscription des participants et des invités'},
+  {h:'09h00 – 11h30', t:'Cérémonie officielle d\'ouverture', big:1, d:'Accueil des autorités au rythme du tam-tam du peuple Dan ; allocution du Coordonnateur principal (programme et consignes de sécurité) ; slam sur la situation des jeunes ; mots des représentants des pays invités ; mots des partenaires ; allocution du PCA de l\'UJDM ; mots des autorités locales ; animation musicale ; ouverture officielle par Monsieur le Préfet ; photo de famille.'},
+  {h:'11h30 – 12h30', t:'Panel inaugural : « S\'employer pour employer »', d:'Échanges entre panélistes, modérés, suivis de questions-réponses avec le public.'},
+  {h:'12h30 – 14h00', t:'Pause déjeuner libre'},
+  {h:'14h00 – 16h00', t:'Lancement des ateliers de formation', tracks:[
+    {k:'A', titre:'Entrepreneuriat · module JA DEEP', who:'Salle A', ss:[['14h00 – 16h00','Idéation et opportunités durables']]},
+    {k:'B', titre:'Employabilité · module Success Skills', who:'Salle B', ss:[['14h00 – 16h00','Compétences de vie et soft skills']]}]},
+  {h:'16h00 – 16h30', t:'Débriefing du Jour 1 et fin des travaux', d:'Points clés de la journée et annonces pour le lendemain.'}]},
  {j:'Vendredi', d:'4 déc.', date:'2026-12-04', items:[
-  {h:'08h00 – 12h30', t:'Ateliers de formation · Jour 2', tracks:[
-    {k:'A', titre:'Entrepreneuriat : BMC, prototype et présélection', who:'Dr Katio · Salle A', ss:[
-      ['08h00 – 09h30','S4 · BMC condensé : segments, proposition de valeur, canaux, relation client, revenus, ressources, activités, partenaires, coûts','BMC rempli'],
-      ['09h30 – 10h15','S5 · Prototype léger : maquette, schéma, parcours client','Prototype'],
-      ['10h15 – 10h30','Pause',null,1],
-      ['10h30 – 11h15','S6 · Executive summary d\'une page et trame du pitch en 3 minutes','Executive summary'],
-      ['11h15 – 12h30','S7 · Pitchs de présélection en sous-groupes (3 min + 2 min de retours par équipe)','6 équipes finalistes']]},
-    {k:'B', titre:'Employabilité : les outils de l\'insertion', who:'Boris · Salle B', ss:[
-      ['08h00 – 09h15','S3 · Marché de l\'emploi et recherche d\'opportunités : secteurs porteurs, réseaux, plateformes en ligne, présence numérique'],
-      ['09h15 – 10h15','S4 · CV et lettre de motivation','CV amélioré'],
-      ['10h15 – 10h30','Pause',null,1],
-      ['10h30 – 11h45','S5 · Entretien d\'embauche : préparation et simulations','Retours sur l\'entretien'],
-      ['11h45 – 12h30','S6 · Plan d\'action personnel et synthèse','Plan d\'action']]}]},
-  {h:'12h30 – 14h00', t:'Pause déjeuner'},
-  {h:'14h00 – 16h30', t:'Session commune : santé mentale des jeunes', big:1, tracks:[
-    {k:'C', titre:'Tous les participants · Grande salle', who:'Ipoté', ss:[
-      ['14h00 – 14h20','Ouverture et brise-glace'],
-      ['14h20 – 15h00','Comprendre la santé mentale : définitions, idées reçues, signes d\'alerte'],
-      ['15h00 – 15h45','Stress de l\'insertion et de l\'entrepreneuriat : stratégies d\'adaptation, en petits groupes'],
-      ['15h45 – 16h15','Demander et offrir de l\'aide : entraide entre pairs, ressources locales','Fiche ressources'],
-      ['16h15 – 16h30','Synthèse et engagement personnel']]}]},
-  {h:'16h30 – 17h30', t:'Fin de journée', tracks:[
-    {k:'A', titre:'Coaching des 6 équipes finalistes', who:'Dr Katio et les mentors · Salle A'},
-    {k:'B', titre:'Mentorat et réseautage', who:'Experts, entreprises et partenaires · Salle B'}]}]},
+  {h:'09h00 – 09h30', t:'Bienvenue au Jour 2', d:'Consignes de sécurité et de bien-être, activité dynamisante, retour sur le Jour 1.'},
+  {h:'09h30 – 12h30', t:'Ateliers de formation (suite)', tracks:[
+    {k:'A', titre:'Entrepreneuriat · module JA DEEP', who:'Salle A', ss:[['09h30 – 12h30','Suite du module JA DEEP']]},
+    {k:'B', titre:'Employabilité · module Success Skills', who:'Salle B', ss:[['09h30 – 12h30','Suite du module Success Skills']]}]},
+  {h:'12h30 – 13h30', t:'Pause déjeuner libre'},
+  {h:'13h30 – 15h15', t:'Session commune : santé mentale des jeunes', big:1, d:'Plénière en grande salle, pour tous les participants.'},
+  {h:'15h15 – 16h15', t:'Mentorat, réseautage et coaching', d:'Grande salle : mentorat et réseautage avec experts, entreprises et partenaires. Salle A : coaching des finalistes du concours de projets.'},
+  {h:'16h15 – 16h30', t:'Débriefing du Jour 2 et fin des travaux'}]},
  {j:'Samedi', d:'5 déc.', date:'2026-12-05', items:[
-  {h:'09h00 – 10h00', t:'Accueil et installation du jury'},
-  {h:'10h00 – 11h00', t:'Concours de pitchs', big:1, d:'Les 6 équipes finalistes : 3 min de pitch, 5 min de questions du jury. Les autres participants assistent au concours.'},
-  {h:'12h30 – 14h00', t:'Pause déjeuner · délibération du jury'},
-  {h:'14h00 – 17h00', t:'Cérémonie de clôture et remise des prix', big:1, d:'Remise des prix du concours. Un questionnaire de satisfaction vous sera distribué : merci d\'y répondre.'},
-  {h:'19h00 – 21h00', t:'Soirée de l\'Engagement et du Dynamisme', d:'Allocutions ; partage d\'expérience sur l\'engagement citoyen ; distinction des bénévoles ; danses traditionnelles de Man ; cocktail de clôture.'}]}
+  {h:'09h00 – 09h30', t:'Accueil des participants et installation du jury'},
+  {h:'09h30 – 12h00', t:'Concours de projets · Session de pitchs', big:1, d:'Passage des finalistes devant le jury international, suivi de questions-réponses. Temps de parole identique pour chaque candidat.'},
+  {h:'12h00 – 14h00', t:'Pause déjeuner et délibération du jury'},
+  {h:'14h00 – 17h00', t:'Grande cérémonie de clôture', big:1, d:'Accueil au tam-tam Dan ; mot d\'ouverture ; panel et partage d\'expérience ; danses traditionnelles de Man ; distinction des bénévoles et remise des prix du concours de pitchs ; clôture. Journée mondiale du bénévolat.'},
+  {h:'17h00 – 18h00', t:'Cocktail de clôture'}]}
 ];
 const TN={A:'Entrepreneuriat',B:'Employabilité',C:'Pour tous'};
 let PARC=''; try{ PARC=localStorage.getItem('jed-parcours')||''; }catch(e){}
