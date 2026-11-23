@@ -1,328 +1,375 @@
-<!doctype html><html lang="fr"><head>
+<!doctype html>
+<html lang="fr">
+<head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body><title>JED 2026 · Man</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+</head>
+<body>
+<title>JED 2026 · Man</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="JED 2026, Journées de l'Engagement et du Dynamisme, du 3 au 5 décembre 2026 à Man, Côte d'Ivoire. Organisées par l'Union des Jeunes Dynamiques de Man (UJDM).">
 <meta name="theme-color" content="#235CA6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap">
 <style>
-/* Mise en page : site d'événement institutionnel. Bandeau d'info, en-tête blanc, grand diaporama, blocs alternés photo/texte, chiffres clés, appels à l'action pleine largeur. Identité JED : bleu, orange, vert, Montserrat. */
 :root{
-  --bleu:#235CA6; --bleu2:#2E74CF; --bleuF:#173F78; --orange:#F07F13; --orange2:#F7A043; --vert:#1A9544; --nuit:#101D2F;
-  --fond:#FFFFFF; --fond2:#F3F6FA; --encre:#101D2F; --gris:#566175; --trait:#E1E6EE;
-  --f:"Montserrat","Segoe UI",Arial,sans-serif;
-  --max:1200px; color-scheme:light;
+  --bleu:#235CA6; --bleuF:#173F78; --orange:#F07F13; --orangeF:#D96C06; --vert:#1A9544; --nuit:#101D2F;
+  --fond:#FFFFFF; --fond2:#F5F7FA; --encre:#101D2F; --gris:#5B6474; --trait:#E3E7ED;
+  --f:"Montserrat","Segoe UI",Arial,sans-serif; --max:1180px; color-scheme:light;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;overflow-x:clip;background:var(--fond);color:var(--encre);font:400 16px/1.65 var(--f);-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;overflow-x:clip;background:var(--fond);color:var(--encre);font:400 15.5px/1.7 var(--f);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
 .w{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-h1,h2,h3{margin:0;line-height:1.12;text-wrap:balance;overflow-wrap:break-word}
+h1,h2,h3{margin:0;line-height:1.15;text-wrap:balance;overflow-wrap:break-word}
 p{margin:0}
-.sur{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--orange)}
-.sur::before{content:"";width:28px;height:3px;background:currentColor;border-radius:2px}
-.titre{font-size:clamp(28px,3.6vw,44px);font-weight:900;color:var(--nuit);margin-top:12px}
-.titre span{color:var(--bleu)}
-.intro{color:var(--gris);font-size:17px;max-width:64ch;margin-top:14px}
-section{padding-block:96px}
-.c{text-align:center}.c .intro{margin-inline:auto}
-.bt{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font:700 15px/1 var(--f);padding:15px 24px;border-radius:999px;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
-.bt:hover{transform:translateY(-2px)}
-.bt.o{background:var(--orange);color:#fff;box-shadow:0 10px 24px rgba(240,127,19,.3)}
-.bt.b{background:var(--bleu);color:#fff;box-shadow:0 10px 24px rgba(35,92,166,.28)}
-.bt.l{background:#fff;color:var(--bleu)}
-.bt.g{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.7)}
+section{padding-block:110px}
 
-/* bandeau d'information */
-.info{background:var(--nuit);color:rgba(255,255,255,.86);font-size:13px;font-weight:600}
-.info .w{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:40px;flex-wrap:wrap;padding-block:6px}
-.info .lieu{display:flex;align-items:center;gap:8px}
-.info .lieu i{width:7px;height:7px;border-radius:50%;background:var(--orange)}
-.info .lieu b{color:#fff}
-.info nav{display:flex;gap:18px}
-.info nav a{text-decoration:none;opacity:.85} .info nav a:hover{opacity:1;color:#fff}
+.st{margin-bottom:56px}
+.st.c{text-align:center}
+.lab{display:block;font-size:11.5px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--orange)}
+.st h2{font-size:clamp(26px,3.1vw,38px);font-weight:700;letter-spacing:-.01em;color:var(--nuit);margin-top:14px}
+.st h2 b{font-weight:800;color:var(--bleu)}
+.st .fil{display:block;width:56px;height:2px;background:var(--orange);margin-top:22px}
+.st.c .fil{margin-inline:auto}
+.st p{color:var(--gris);font-size:16.5px;max-width:62ch;margin-top:20px}
+.st.c p{margin-inline:auto}
 
-/* en-tête */
+.bt{display:inline-flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;text-decoration:none;font:600 13.5px/1 var(--f);letter-spacing:.08em;text-transform:uppercase;padding:17px 28px;border-radius:3px;border:0;cursor:pointer;transition:background .25s,color .25s,box-shadow .25s}
+.bt svg{transition:transform .25s}
+.bt:hover svg{transform:translateX(4px)}
+.bt.o{background:var(--orange);color:#fff}.bt.o:hover{background:var(--orangeF)}
+.bt.b{background:var(--bleu);color:#fff}.bt.b:hover{background:var(--bleuF)}
+.bt.l{background:#fff;color:var(--nuit)}.bt.l:hover{background:var(--fond2)}
+.bt.g{background:transparent;color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.6)}.bt.g:hover{background:rgba(255,255,255,.12)}
+.bt.t{background:transparent;color:var(--bleu);box-shadow:inset 0 0 0 1px var(--bleu)}.bt.t:hover{background:var(--bleu);color:#fff}
+.lien{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--bleu);text-decoration:none;padding-bottom:6px;border-bottom:1px solid currentColor}
+.lien:hover{color:var(--orange)}
+
+.info{background:var(--nuit);color:rgba(255,255,255,.72);font-size:12.5px}
+.info .w{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:42px}
+.info .g{display:flex;align-items:center;gap:22px}
+.info .g span{display:flex;align-items:center;gap:8px}
+.info svg{color:var(--orange)}
+.info nav{display:flex}
+.info nav a{text-decoration:none;padding:0 16px;border-left:1px solid rgba(255,255,255,.14);line-height:1}
+.info nav a:first-child{border-left:0}
+.info nav a:hover{color:#fff}
+
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:#fff}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--trait)}
-header .w{display:flex;align-items:center;gap:26px;height:78px}
-.logo{display:flex;align-items:center;gap:14px;text-decoration:none}
-.logo img{height:46px;width:auto}
-.logo span{font-size:11px;font-weight:700;line-height:1.35;color:var(--gris);border-left:1px solid var(--trait);padding-left:14px;text-transform:uppercase;letter-spacing:.06em}
-.menu{display:flex;gap:2px;margin-left:auto}
-.menu a{white-space:nowrap;text-decoration:none;font-weight:700;font-size:14px;padding:10px 12px;border-radius:8px;color:var(--nuit);position:relative}
-.menu a::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;background:var(--orange);transform:scaleX(0);transition:transform .25s}
-.menu a:hover::after,.menu a.on::after{transform:scaleX(1)}
-header .bt{padding:12px 20px;font-size:14px}
-.burger{display:none;margin-left:auto;background:none;border:0;width:44px;height:44px;border-radius:10px;cursor:pointer;color:var(--nuit)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:#fff;transition:box-shadow .3s}
+header.ombre{box-shadow:0 10px 30px rgba(16,29,47,.08)}
+header .w{display:flex;align-items:center;gap:30px;height:84px}
+.logo img{height:48px;width:auto}
+.menu{display:flex;margin-left:auto;height:100%}
+.menu a{display:flex;align-items:center;white-space:nowrap;text-decoration:none;font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:0 14px;color:var(--nuit);position:relative}
+.menu a::after{content:"";position:absolute;left:14px;right:14px;bottom:0;height:3px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.menu a:hover::after{transform:scaleX(1)}
+.menu a:hover{color:var(--bleu)}
+header .bt{padding:15px 22px;font-size:12.5px}
+.burger{display:none;margin-left:auto;background:none;border:0;width:44px;height:44px;cursor:pointer;color:var(--nuit)}
 
-/* diaporama */
-.hero{position:relative;height:min(720px,92vh);min-height:600px;overflow:hidden;background:var(--bleuF);color:#fff}
-.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.1s ease}
-.slide.on{opacity:1}
-.slide img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 7s ease-out}
-.slide.on img{transform:scale(1)}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,40,82,.94) 0%,rgba(23,63,120,.82) 42%,rgba(23,63,120,.25) 78%,rgba(23,63,120,.1) 100%);pointer-events:none}
-.hero .w{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding-block:40px 96px}
-.hero .ed{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:7px 14px;border-radius:999px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;width:max-content;max-width:100%}
-.hero .ed i{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 0 rgba(240,127,19,.6);animation:pouls 2s infinite}
-@keyframes pouls{70%{box-shadow:0 0 0 8px rgba(240,127,19,0)}100%{box-shadow:0 0 0 0 rgba(240,127,19,0)}}
-.hero h1{font-size:clamp(30px,5vw,64px);font-weight:900;text-transform:uppercase;line-height:1.02;margin-top:20px;max-width:13ch}
-.hero h1 em{font-style:normal;color:var(--orange2)}
-.hero .th{font-size:clamp(16px,1.6vw,20px);font-weight:500;margin-top:16px;max-width:44ch;color:rgba(255,255,255,.92)}
-.hero .q{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:22px;font-weight:700;font-size:15px}
-.hero .q span{display:flex;align-items:center;gap:9px}
-.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.sl-n{position:absolute;z-index:3;right:max(20px,calc((100% - var(--max))/2 + 20px));bottom:84px;display:flex;gap:10px;align-items:center}
-.sl-n button{width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(255,255,255,.55);background:rgba(16,29,47,.25);color:#fff;display:grid;place-items:center;cursor:pointer;backdrop-filter:blur(4px)}
-.sl-n button:hover{background:var(--orange);border-color:var(--orange)}
-.dots{display:flex;gap:6px;margin-right:8px}
-.dots i{width:22px;height:4px;border-radius:2px;background:rgba(255,255,255,.4);transition:.3s}
-.dots i.on{background:var(--orange);width:38px}
-@media (prefers-reduced-motion:no-preference){
-  .hero .w>*{animation:monte .9s cubic-bezier(.2,.8,.2,1) both}
-  .hero .w>*:nth-child(2){animation-delay:.08s}.hero .w>*:nth-child(3){animation-delay:.16s}.hero .w>*:nth-child(4){animation-delay:.24s}.hero .w>*:nth-child(5){animation-delay:.32s}
-}
-@keyframes monte{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero{position:relative;height:min(760px,calc(100vh - 126px));min-height:560px;overflow:hidden;background:var(--nuit);color:#fff}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity 1.2s ease,visibility 0s 1.2s}
+.slide.on{opacity:1;visibility:visible;transition:opacity 1.2s ease}
+.slide>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 8s linear}
+.slide.on>img{transform:scale(1)}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,29,47,.35) 0%,rgba(16,29,47,.55) 55%,rgba(16,29,47,.88) 100%)}
+.slide .w{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-block:0 120px}
+.slide .k{font-size:12px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:14px}
+.slide .k::before{content:"";width:40px;height:2px;background:var(--orange)}
+.slide h1,.slide h2{font-size:clamp(34px,5.4vw,72px);font-weight:800;letter-spacing:-.02em;line-height:1.02;margin-top:20px;max-width:15ch}
+.slide h1 span,.slide h2 span{color:var(--orange)}
+.slide .sous{font-size:clamp(15px,1.5vw,19px);margin-top:20px;max-width:52ch;color:rgba(255,255,255,.88)}
+.slide .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.slide.on .anim>*{animation:monte 1s cubic-bezier(.2,.8,.2,1) both}
+.slide.on .anim>*:nth-child(2){animation-delay:.12s}.slide.on .anim>*:nth-child(3){animation-delay:.24s}.slide.on .anim>*:nth-child(4){animation-delay:.36s}
+@keyframes monte{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.fl{position:absolute;z-index:3;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;border:1px solid rgba(255,255,255,.45);background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer;transition:background .25s,border-color .25s}
+.fl:hover{background:var(--orange);border-color:var(--orange)}
+.fl.p{left:max(18px,env(safe-area-inset-left,0px))}.fl.n{right:max(18px,env(safe-area-inset-right,0px))}
+.prog-sl{position:absolute;z-index:3;left:0;right:0;bottom:44px}
+.prog-sl .w{display:flex;gap:28px}
+.prog-sl button{flex:1;max-width:240px;background:none;border:0;padding:14px 0 0;text-align:left;color:rgba(255,255,255,.55);font:600 12px var(--f);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;position:relative}
+.prog-sl button::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:rgba(255,255,255,.25)}
+.prog-sl button i{position:absolute;left:0;top:0;height:2px;width:0;background:var(--orange)}
+.prog-sl button.on{color:#fff}
+.prog-sl button.on i{animation:barre 7s linear forwards}
+@keyframes barre{to{width:100%}}
 
-/* compte à rebours, posé sous le diaporama */
-.cpt-wrap{position:relative;z-index:5;margin-top:-56px}
-.cpt{background:#fff;border-radius:18px;box-shadow:0 24px 50px rgba(16,29,47,.14);display:grid;grid-template-columns:1.2fr repeat(4,1fr);align-items:stretch;overflow:hidden}
-.cpt .lab{background:var(--orange);color:#fff;padding:20px 24px;display:flex;flex-direction:column;justify-content:center}
-.cpt .lab b{font-size:18px;font-weight:800;line-height:1.2}
-.cpt .lab span{font-size:13px;opacity:.92;margin-top:3px}
-.cpt .u{padding:18px 8px;text-align:center;border-left:1px solid var(--trait)}
-.cpt .u b{display:block;height:44px;overflow:hidden;font:900 40px/44px var(--f);color:var(--bleu);font-variant-numeric:tabular-nums}
+.cpt{background:var(--bleu);color:#fff}
+.cpt .w{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(4,minmax(0,1fr)) auto;align-items:center}
+.cpt .t{padding:26px 0}
+.cpt .t small{display:block;font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.cpt .t b{display:block;font-size:17px;font-weight:700;margin-top:4px}
+.cpt .u{text-align:center;padding:22px 6px;border-left:1px solid rgba(255,255,255,.16)}
+.cpt .u b{display:block;height:42px;overflow:hidden;font:300 38px/42px var(--f);font-variant-numeric:tabular-nums}
 .cpt .u b i{display:block;font-style:normal}
 .cpt .u b i.r{animation:roule .45s cubic-bezier(.2,.8,.2,1)}
 @keyframes roule{from{transform:translateY(-100%);opacity:0}to{transform:none;opacity:1}}
-.cpt .u span{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gris)}
-.cpt.live{grid-template-columns:1fr}
+.cpt .u span{font-size:10.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.cpt .bt{margin-left:28px}
+.cpt.live .w{grid-template-columns:1fr auto}
 
-/* partenaires */
-.parts{padding-block:56px 20px}
-.parts h2{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gris);text-align:center}
-.plg{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;margin-top:22px}
-.plg div{height:84px;flex:0 1 170px;display:grid;place-items:center;padding:10px 16px;border:1px solid var(--trait);border-radius:12px;background:#fff;filter:grayscale(.15);transition:filter .3s,transform .3s}
-.plg div:hover{filter:none;transform:translateY(-3px)}
-.plg img{max-height:58px;width:auto}
-.plg .atk{font:900 italic 22px var(--f);color:#111}
+.parts{padding-block:54px;border-bottom:1px solid var(--trait)}
+.parts .w{display:grid;grid-template-columns:200px minmax(0,1fr);align-items:center;gap:30px}
+.parts h2{font-size:11.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gris);line-height:1.6;padding-right:20px;border-right:1px solid var(--trait)}
+.plg{display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap}
+.plg img{height:62px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.75;transition:filter .35s,opacity .35s}
+.plg img:hover{filter:none;opacity:1}
+.plg .atk{font:800 italic 21px var(--f);color:#111;opacity:.75}
 
-/* à propos */
-.ap .g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
-.ap .ph{position:relative}
-.ap .ph img{border-radius:20px;aspect-ratio:5/4;object-fit:cover;width:100%}
-.ap .ph::before{content:"";position:absolute;left:-18px;top:-18px;width:120px;height:120px;border-radius:20px;background:var(--orange);z-index:-1}
-.ap .ph .badge{position:absolute;right:-14px;bottom:-24px;background:var(--bleu);color:#fff;border-radius:16px;padding:16px 20px;box-shadow:0 18px 36px rgba(35,92,166,.35)}
-.ap .ph .badge b{display:block;font-size:30px;font-weight:900;line-height:1}
-.ap .ph .badge span{font-size:12.5px;font-weight:600;opacity:.9}
-.obj{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:10px}
-.obj li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:10px;font-size:15px;color:var(--gris)}
-.obj li svg{color:var(--vert);margin-top:3px}
+.ap .g{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:80px;align-items:center}
+.col{position:relative;padding:0 0 70px 0}
+.col .a{width:84%;aspect-ratio:4/3.3;object-fit:cover}
+.col .b{position:absolute;right:0;bottom:0;width:48%;aspect-ratio:4/4.6;object-fit:cover;border:10px solid #fff;box-shadow:0 30px 50px rgba(16,29,47,.15)}
+.col .an{position:absolute;left:-28px;top:40px;writing-mode:vertical-rl;transform:rotate(180deg);font-size:11px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--gris)}
+.ap .st{margin-bottom:28px}
+.ap .tx p+p{margin-top:16px}
+.ap .tx>p{color:var(--gris)}
+.obj{list-style:none;margin:30px 0 36px;padding:0;border-top:1px solid var(--trait)}
+.obj li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:8px;padding:14px 0;border-bottom:1px solid var(--trait);font-size:14.5px}
+.obj li em{font-style:normal;font-weight:700;color:var(--orange);font-size:13px;letter-spacing:.06em}
 
-/* thème */
-.theme{background:var(--bleu);color:#fff;position:relative;overflow:hidden;padding-block:84px}
-.theme::before,.theme::after{content:"";position:absolute;border-radius:50%;border:44px solid rgba(255,255,255,.06)}
-.theme::before{width:420px;height:420px;left:-160px;top:-180px}
-.theme::after{width:520px;height:520px;right:-200px;bottom:-260px;border-color:rgba(240,127,19,.18)}
-.theme .w{position:relative;z-index:1;text-align:center}
-.theme .sur{color:var(--orange2)}
-.theme blockquote{margin:18px auto 0;font-size:clamp(24px,3.4vw,42px);font-weight:900;line-height:1.2;max-width:24ch}
-.theme p{margin:18px auto 0;max-width:60ch;color:rgba(255,255,255,.85)}
+.theme{position:relative;color:#fff;overflow:hidden;padding-block:130px}
+.theme>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.theme::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(23,63,120,.96) 0%,rgba(35,92,166,.88) 60%,rgba(35,92,166,.72) 100%)}
+.theme .w{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:70px;align-items:center}
+.theme h2{font-size:clamp(22px,2.4vw,30px);font-weight:700;margin-top:14px}
+.theme .ql{border-left:1px solid rgba(255,255,255,.3);padding-left:56px}
+.theme blockquote{margin:0;font-size:clamp(26px,3.4vw,46px);font-weight:300;line-height:1.2;letter-spacing:-.01em}
+.theme blockquote b{font-weight:700}
+.theme .pan{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center;margin-top:30px;font-size:14px;color:rgba(255,255,255,.85)}
+.theme .pan span{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;background:var(--orange);color:#fff;padding:6px 10px}
 
-/* piliers */
-.pil{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:44px}
-.pil article{background:#fff;border:1px solid var(--trait);border-radius:18px;padding:30px 26px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
-.pil article:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(16,29,47,.1)}
-.pil article::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--k)}
-.pil .ic{width:56px;height:56px;border-radius:14px;display:grid;place-items:center;background:color-mix(in srgb,var(--k) 12%,#fff);color:var(--k)}
-.pil h3{font-size:20px;font-weight:800;margin-top:18px}
-.pil .sal{display:inline-block;font-size:12px;font-weight:800;color:var(--k);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
-.pil p{color:var(--gris);font-size:15px;margin-top:10px}
+.pil{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.pil article{display:flex;flex-direction:column}
+.pil .im{position:relative;aspect-ratio:4/3;overflow:hidden}
+.pil .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.pil article:hover .im img{transform:scale(1.06)}
+.pil .im span{position:absolute;left:0;bottom:0;background:var(--k);color:#fff;font-size:22px;font-weight:300;padding:12px 18px}
+.pil .tx{padding:28px 4px 0}
+.pil h3{font-size:21px;font-weight:700}
+.pil .sal{display:block;font-size:11px;font-weight:700;color:var(--k);letter-spacing:.18em;text-transform:uppercase;margin-top:8px}
+.pil p{color:var(--gris);font-size:15px;margin-top:14px}
 
-/* programme */
 .prog{background:var(--fond2)}
-.jours{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:40px}
-.jours button{border:0;background:#fff;border-radius:16px;padding:18px 20px;text-align:left;cursor:pointer;font-family:var(--f);color:var(--nuit);box-shadow:0 1px 0 var(--trait);transition:.3s;position:relative}
-.jours button small{display:block;font-size:12px;font-weight:800;color:var(--orange);letter-spacing:.1em;text-transform:uppercase}
-.jours button b{display:block;font-size:19px;font-weight:800;margin-top:4px}
-.jours button span{display:block;font-size:13px;color:var(--gris);margin-top:4px;line-height:1.4}
-.jours button[aria-selected="true"]{background:var(--bleu);color:#fff;box-shadow:0 16px 34px rgba(35,92,166,.3)}
-.jours button[aria-selected="true"] small{color:var(--orange2)} .jours button[aria-selected="true"] span{color:rgba(255,255,255,.82)}
-.jhead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:28px;font-size:14px;color:var(--gris);font-weight:600}
-.jhead b{color:var(--nuit)}
-.ag{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
-.ag li{display:grid;grid-template-columns:150px minmax(0,1fr);gap:22px;background:#fff;border-radius:14px;padding:20px 24px;border-left:4px solid var(--bleu);animation:monte .45s cubic-bezier(.2,.8,.2,1) both}
-.ag li.p{border-left-color:var(--trait);background:transparent;padding-block:12px}
-.ag li.f{border-left-color:var(--orange)}
-.ag time{font-weight:800;color:var(--bleu);font-size:15px;font-variant-numeric:tabular-nums}
-.ag li.p time,.ag li.p b{color:var(--gris);font-weight:600}
-.ag b{font-size:17px;font-weight:800;display:block}
-.ag .d{color:var(--gris);font-size:14.5px;margin-top:4px}
-.ag ul{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:6px}
-.ag ul li{display:block;background:none;border:0;padding:0 0 0 18px;font-size:14.5px;color:var(--gris);position:relative;animation:none}
-.ag ul li::before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--orange)}
-.ag .sa{display:inline-block;font-size:11.5px;font-weight:800;padding:3px 9px;border-radius:999px;margin-right:6px;vertical-align:1px}
-.sa.A{background:#E5EEFA;color:var(--bleu)} .sa.B{background:#E3F3E9;color:var(--vert)} .sa.G{background:#FDEEDF;color:#B85A00}
-.prog .act{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.pg{display:grid;grid-template-columns:300px minmax(0,1fr);gap:50px;align-items:start}
+.jours{display:flex;flex-direction:column;border-top:1px solid var(--trait);position:sticky;top:110px}
+.jours button{border:0;border-bottom:1px solid var(--trait);background:none;padding:22px 0 22px 22px;text-align:left;cursor:pointer;font-family:var(--f);color:var(--gris);position:relative}
+.jours button::before{content:"";position:absolute;left:0;top:22px;bottom:22px;width:3px;background:var(--orange);transform:scaleY(0);transition:transform .3s}
+.jours button small{display:block;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+.jours button b{display:block;font-size:20px;font-weight:700;margin-top:4px;color:var(--nuit)}
+.jours button span{display:block;font-size:13px;margin-top:2px}
+.jours button[aria-selected="true"] small{color:var(--orange)}
+.jours button[aria-selected="true"]::before{transform:none}
+.jours button:not([aria-selected="true"]) b{color:var(--gris)}
+.jours .ics{margin-top:26px}
+.jours .ics .bt{width:100%}
+.jhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding-bottom:18px;border-bottom:2px solid var(--nuit)}
+.jhead h3{font-size:24px;font-weight:700}
+.jhead span{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gris)}
+.ag{list-style:none;margin:0;padding:0}
+.ag>li{display:grid;grid-template-columns:140px minmax(0,1fr);gap:30px;padding:26px 0;border-bottom:1px solid var(--trait);animation:monte .5s cubic-bezier(.2,.8,.2,1) both}
+.ag time{font-weight:600;color:var(--bleu);font-size:14.5px;font-variant-numeric:tabular-nums;padding-top:2px}
+.ag b{font-size:17.5px;font-weight:700;display:block;line-height:1.35}
+.ag li.f>div>b::after{content:"Temps fort";display:inline-block;margin-left:12px;vertical-align:3px;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);border:1px solid var(--orange);padding:3px 7px}
+.ag li.p time,.ag li.p b{color:var(--gris);font-weight:500}
+.ag .d{color:var(--gris);font-size:14.5px;margin-top:6px}
+.ag ul{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:7px}
+.ag ul li{padding-left:20px;font-size:14.5px;color:var(--gris);position:relative}
+.ag ul li::before{content:"";position:absolute;left:0;top:11px;width:9px;height:1px;background:var(--orange)}
+.sa{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;margin-right:8px;vertical-align:1px;color:#fff}
+.sa.A{background:var(--bleu)} .sa.B{background:var(--vert)} .sa.G{background:var(--orange)}
 
-/* intervenants */
-.spk{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:44px}
-.sp{background:#fff;border-radius:20px;overflow:hidden;border:1px solid var(--trait);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
-.sp:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(16,29,47,.12)}
-.sp .im{position:relative;aspect-ratio:4/4.3;overflow:hidden;background:var(--fond2)}
-.sp .im img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .6s}
-.sp:hover .im img{transform:scale(1.04)}
-.sp .im .tg{position:absolute;left:14px;top:14px;background:var(--orange);color:#fff;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:6px 11px;border-radius:999px}
-.sp .tx{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
-.sp h3{font-size:19px;font-weight:800;text-transform:uppercase}
-.sp .rl{color:var(--bleu);font-weight:700;font-size:14px;margin-top:4px}
-.sp p{color:var(--gris);font-size:14px;margin-top:10px}
-.sp button{margin-top:auto;align-self:flex-start;padding-top:14px;background:none;border:0;font:800 14px var(--f);color:var(--orange);cursor:pointer;display:inline-flex;gap:6px;align-items:center}
-.sp.vide .im{display:grid;place-items:center;background:linear-gradient(135deg,var(--bleu),var(--bleuF))}
-.sp.vide .im svg{color:rgba(255,255,255,.35)}
-.sp.vide h3{color:var(--gris)}
-dialog{border:0;border-radius:20px;padding:0;max-width:min(760px,calc(100% - 32px));width:100%;box-shadow:0 30px 80px rgba(16,29,47,.35)}
-dialog::backdrop{background:rgba(16,29,47,.6);backdrop-filter:blur(3px)}
-.dl{display:grid;grid-template-columns:240px minmax(0,1fr)}
+.spk{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.sp{position:relative;overflow:hidden;background:var(--nuit);aspect-ratio:4/5;cursor:pointer;color:#fff;border:0;padding:0;text-align:left;font-family:var(--f)}
+.sp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.sp::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,29,47,0) 45%,rgba(16,29,47,.92) 100%)}
+.sp:hover img{transform:scale(1.05)}
+.sp .tx{position:absolute;z-index:1;left:0;right:0;bottom:0;padding:28px}
+.sp .tg{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;background:var(--orange);padding:5px 9px}
+.sp h3{font-size:22px;font-weight:700;margin-top:14px;text-transform:uppercase;letter-spacing:.02em}
+.sp .rl{font-size:14px;color:rgba(255,255,255,.82);margin-top:4px}
+.sp .pl{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-top:16px;color:var(--orange)}
+.sp.vide{cursor:default;background:linear-gradient(160deg,var(--bleu),var(--bleuF))}
+.sp.vide::after{background:none}
+.sp.vide .ic{position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.18)}
+dialog{border:0;padding:0;max-width:min(860px,calc(100% - 32px));width:100%;box-shadow:0 40px 90px rgba(16,29,47,.4)}
+dialog::backdrop{background:rgba(16,29,47,.72)}
+.dl{display:grid;grid-template-columns:320px minmax(0,1fr)}
 .dl img{width:100%;height:100%;object-fit:cover;object-position:top}
-.dl .tx{padding:28px 30px 30px;max-height:80vh;overflow:auto}
-.dl h3{font-size:22px;font-weight:900;text-transform:uppercase}
-.dl .rl{color:var(--bleu);font-weight:700;margin-top:4px}
-.dl .bio{margin-top:14px;color:var(--gris);font-size:15px;display:grid;gap:12px}
-.dl .bio ul{margin:0;padding-left:18px;display:grid;gap:6px}
-.dl .x{position:absolute;right:14px;top:14px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.9);cursor:pointer;display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.dl .tx{padding:44px 44px 40px;max-height:84vh;overflow:auto}
+.dl h3{font-size:24px;font-weight:700;text-transform:uppercase}
+.dl .rl{color:var(--orange);font-weight:600;margin-top:6px;font-size:14px}
+.dl .bio{margin-top:22px;padding-top:22px;border-top:1px solid var(--trait);color:var(--gris);font-size:15px;display:grid;gap:14px}
+.dl .bio ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.dl .bio ul li{padding-left:22px;position:relative}
+.dl .bio ul li::before{content:"";position:absolute;left:0;top:12px;width:10px;height:1px;background:var(--orange)}
+.dl .x{position:absolute;right:14px;top:14px;width:44px;height:44px;border:0;background:#fff;cursor:pointer;display:grid;place-items:center}
 
-/* délégations */
-.del{background:var(--nuit);color:#fff;position:relative;overflow:hidden}
-.del .titre{color:#fff} .del .titre span{color:var(--orange2)} .del .intro{color:rgba(255,255,255,.75)}
-.pays{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;margin-top:44px}
-.py{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:22px 16px;text-align:center;transition:transform .3s,background .3s}
-.py:hover{transform:translateY(-4px);background:rgba(255,255,255,.09)}
-.py svg{width:84px;height:56px;border-radius:6px;margin:0 auto;box-shadow:0 8px 20px rgba(0,0,0,.35);display:block}
-.py b{display:block;margin-top:14px;font-size:15.5px;font-weight:800}
-.py span{display:block;font-size:12px;color:rgba(255,255,255,.6);margin-top:2px}
-.hote{margin-top:22px;display:flex;align-items:center;gap:14px;justify-content:center;flex-wrap:wrap;color:rgba(255,255,255,.75);font-size:14.5px}
-.hote svg{width:42px;height:28px;border-radius:4px}
+.chif{position:relative;color:#fff;overflow:hidden;padding-block:100px}
+.chif>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.chif::after{content:"";position:absolute;inset:0;background:rgba(16,29,47,.9)}
+.chif .w{position:relative;z-index:1}
+.chif .st h2{color:#fff}.chif .st h2 b{color:var(--orange)}
+.nb{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.nb div{padding:6px 30px;border-left:1px solid rgba(255,255,255,.16)}
+.nb div:first-child{border-left:0;padding-left:0}
+.nb b{display:block;font-size:clamp(46px,5.6vw,76px);font-weight:200;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.nb b sup{font-size:.4em;font-weight:500;color:var(--orange);vertical-align:top;margin-left:2px}
+.nb span{display:block;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-top:16px;line-height:1.6}
 
-/* chiffres */
-.chif{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:44px;border-radius:20px;overflow:hidden;background:#fff;border:1px solid var(--trait)}
-.chif div{padding:30px 24px;border-left:1px solid var(--trait)}
-.chif div:first-child{border-left:0}
-.chif b{display:block;font-size:clamp(34px,4vw,50px);font-weight:900;color:var(--bleu);line-height:1;font-variant-numeric:tabular-nums}
-.chif div:nth-child(2) b{color:var(--orange)} .chif div:nth-child(3) b{color:var(--vert)}
-.chif span{display:block;color:var(--gris);font-size:14.5px;margin-top:10px;font-weight:600}
+.del .g{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:70px;align-items:start}
+.del .st{margin-bottom:0;position:sticky;top:120px}
+.del .hote{display:flex;align-items:center;gap:14px;margin-top:34px;padding-top:24px;border-top:1px solid var(--trait);font-size:14px;color:var(--gris)}
+.del .hote svg{width:36px;height:24px;flex:0 0 auto;box-shadow:0 0 0 1px var(--trait)}
+.pays{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--trait);border-left:1px solid var(--trait)}
+.py{display:flex;align-items:center;gap:22px;padding:30px 28px;border-right:1px solid var(--trait);border-bottom:1px solid var(--trait);transition:background .3s}
+.py:hover{background:var(--fond2)}
+.py svg{width:64px;height:43px;flex:0 0 auto;box-shadow:0 6px 16px rgba(16,29,47,.16)}
+.py em{display:block;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.2em;color:var(--orange)}
+.py b{display:block;font-size:19px;font-weight:700;margin-top:2px}
+.py span{display:block;font-size:13px;color:var(--gris)}
 
-/* appel à l'action */
-.cta{position:relative;color:#fff;padding-block:100px;overflow:hidden}
-.cta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.cta::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(240,127,19,.95),rgba(240,127,19,.78) 50%,rgba(35,92,166,.55))}
-.cta .w{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:center}
-.cta h2{font-size:clamp(28px,3.8vw,48px);font-weight:900;text-transform:uppercase}
-.cta p{margin-top:14px;font-size:17px;max-width:48ch}
-.cta .bx{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
-
-/* concours */
-.conc .g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
-.crit{display:grid;gap:14px;margin-top:24px}
-.crit .lb{display:flex;justify-content:space-between;font-weight:700;font-size:15px}
+.conc{background:var(--fond2)}
+.conc .g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:center}
+.conc .ph{position:relative}
+.conc .ph img{width:100%;aspect-ratio:4/4.4;object-fit:cover}
+.conc .ph .pr{position:absolute;right:-24px;bottom:40px;background:var(--orange);color:#fff;padding:24px 28px;max-width:250px}
+.conc .ph .pr small{display:block;font-size:10.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;opacity:.85}
+.conc .ph .pr b{display:block;font-size:17px;font-weight:700;margin-top:6px;line-height:1.35}
+.conc .st{margin-bottom:30px}
+.crit{display:grid;gap:18px}
+.crit .lb{display:flex;justify-content:space-between;font-weight:600;font-size:14px}
 .crit .lb span{color:var(--orange)}
-.crit .br{height:8px;border-radius:5px;background:var(--fond2);overflow:hidden;margin-top:6px}
-.crit .br i{display:block;height:100%;border-radius:5px;background:linear-gradient(90deg,var(--orange),var(--orange2));width:0;transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
-.conc .ph{border-radius:20px;overflow:hidden;aspect-ratio:4/3.2}
-.conc .ph img{width:100%;height:100%;object-fit:cover}
+.crit .br{height:3px;background:var(--trait);margin-top:9px}
+.crit .br i{display:block;height:100%;background:var(--orange);width:0;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
 
-/* galerie */
-.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:220px;gap:12px;margin-top:40px}
-.gal a{border-radius:14px;overflow:hidden;position:relative}
-.gal img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.part{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.ca{display:flex;flex-direction:column;border:1px solid var(--trait);background:#fff;transition:box-shadow .35s,transform .35s}
+.ca:hover{box-shadow:0 30px 60px rgba(16,29,47,.1);transform:translateY(-4px)}
+.ca .im{aspect-ratio:16/10;overflow:hidden}
+.ca .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.ca:hover .im img{transform:scale(1.05)}
+.ca .tx{padding:30px 30px 32px;display:flex;flex-direction:column;flex:1}
+.ca h3{font-size:20px;font-weight:700}
+.ca p{color:var(--gris);font-size:14.5px;margin-top:12px;margin-bottom:26px}
+.ca .lien{margin-top:auto;align-self:flex-start}
+
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:230px;gap:8px}
+.gal a{overflow:hidden;position:relative}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.gal a::after{content:"";position:absolute;inset:0;background:rgba(35,92,166,0);transition:background .4s}
+.gal a:hover::after{background:rgba(35,92,166,.25)}
 .gal a:hover img{transform:scale(1.05)}
 .gal .gr{grid-column:span 2;grid-row:span 2}
+.galb{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:44px}
+.galb .st{margin-bottom:0}
 
-/* pied de page */
-footer{background:var(--nuit);color:rgba(255,255,255,.75);padding-block:64px 0;font-size:14.5px}
-footer .g{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
-footer h3{color:#fff;font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px}
-footer .lg{height:52px;width:auto;margin-bottom:16px}
-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.cta{position:relative;color:#fff;overflow:hidden;padding-block:110px}
+.cta>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.cta::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,29,47,.92) 0%,rgba(16,29,47,.75) 55%,rgba(16,29,47,.35) 100%)}
+.cta .w{position:relative;z-index:1}
+.cta h2{font-size:clamp(30px,4vw,52px);font-weight:800;letter-spacing:-.02em;margin-top:16px;max-width:17ch}
+.cta p{margin-top:18px;font-size:17px;max-width:50ch;color:rgba(255,255,255,.85)}
+.cta .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+
+footer{background:var(--nuit);color:rgba(255,255,255,.66);padding-block:80px 0;font-size:14px}
+footer .g{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px}
+footer h3{color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.22em;margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer .lg{height:54px;width:auto;margin-bottom:22px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
 footer .cp{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-footer .cp span{color:#fff;font-weight:600;user-select:all}
-footer .cp button{font:700 11.5px var(--f);padding:5px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:none;color:#fff;cursor:pointer}
+footer .cp span{color:#fff;user-select:all}
+footer .cp button{font:600 10.5px var(--f);letter-spacing:.1em;text-transform:uppercase;padding:5px 9px;border:1px solid rgba(255,255,255,.25);background:none;color:rgba(255,255,255,.8);cursor:pointer}
+footer .cp button:hover{border-color:var(--orange);color:#fff}
 footer a{text-decoration:none} footer a:hover{color:#fff}
-.bas{margin-top:48px;border-top:1px solid rgba(255,255,255,.12)}
-.bas .w{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:20px;font-size:13px}
-.tri{display:flex;height:6px}.tri i{flex:1}
+.bas{margin-top:64px;border-top:1px solid rgba(255,255,255,.1)}
+.bas .w{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:22px;font-size:12.5px}
+.tri{display:flex;height:4px}.tri i{flex:1}
 
-/* barre mobile */
 .mbar{display:none}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.vu{opacity:1;transform:none}
 
-@media (max-width:1080px){
+@media (max-width:1100px){
   .menu{display:none} header .bt.hd{display:none}
   .burger{display:grid;place-items:center}
-  header.ouvert .menu{display:flex;flex-direction:column;position:absolute;top:78px;left:0;right:0;background:#fff;padding:10px max(20px,env(safe-area-inset-left,0px)) 18px;box-shadow:0 18px 30px rgba(16,29,47,.12)}
-  header.ouvert .menu a{padding:12px 4px;font-size:16px;border-bottom:1px solid var(--trait)}
+  header.ouvert .menu{display:flex;flex-direction:column;position:absolute;top:84px;left:0;right:0;height:auto;background:#fff;padding:6px max(20px,env(safe-area-inset-left,0px)) 18px;box-shadow:0 18px 30px rgba(16,29,47,.12)}
+  header.ouvert .menu a{padding:16px 0;font-size:14px;border-bottom:1px solid var(--trait)}
   header.ouvert .menu a::after{display:none}
-  .pays{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cpt .bt{display:none}
+  .cpt .w{grid-template-columns:minmax(0,1.4fr) repeat(4,minmax(0,1fr))}
+  footer .g{grid-template-columns:1fr 1fr}
 }
 @media (max-width:900px){
-  section{padding-block:72px}
-  .info nav{display:none}
-  .info .w{flex-wrap:nowrap;font-size:12px}
-  .info .lieu{flex-wrap:wrap;column-gap:6px}
-  .plg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-  .plg div{height:70px;padding:8px}
-  .plg img{max-height:46px}
-  .plg .atk{font-size:16px}
-  .logo span{display:none}
-  .hero{height:auto;min-height:0}
-  .hero::after{background:linear-gradient(180deg,rgba(16,40,82,.78),rgba(23,63,120,.9))}
-  .hero h1{max-width:none}
-  .hero .ctas{display:grid;grid-template-columns:1fr} .hero .ctas .bt{width:100%}
-  .sl-n{left:max(20px,env(safe-area-inset-left,0px));right:auto;bottom:74px}
-  .hero .w{padding-block:48px 140px}
-  .cpt{grid-template-columns:repeat(4,minmax(0,1fr))}
-  .cpt .lab{grid-column:1/-1;padding:14px 18px;flex-direction:row;align-items:center;justify-content:space-between;gap:10px}
-  .cpt .lab b{font-size:15px}
-  .cpt .u{padding:14px 4px} .cpt .u:nth-child(2){border-left:0}
+  section{padding-block:80px}
+  .st{margin-bottom:40px}
+  .info .g span:nth-child(2),.info nav{display:none}
+  .info .g span:nth-child(1)::after{content:"· 3 – 5 déc. 2026";color:rgba(255,255,255,.72);margin-left:4px}
+  .hero{height:640px;min-height:0}
+  .slide .w{padding-block:0 150px}
+  .fl{top:auto;bottom:30px;transform:none;width:46px;height:46px}
+  .fl.p{left:auto;right:calc(max(20px,env(safe-area-inset-right,0px)) + 56px)}
+  .fl.n{right:max(20px,env(safe-area-inset-right,0px))}
+  .prog-sl{bottom:52px;right:130px}.prog-sl .w{gap:10px}.prog-sl button{font-size:0;padding-top:0;max-width:40px}
+  .slide .ctas{display:grid;grid-template-columns:1fr}
+  .cpt .w{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .cpt .t{grid-column:1/-1;padding:18px 0 4px;text-align:center}
+  .cpt .u{padding:12px 4px 18px}.cpt .u:nth-child(2){border-left:0}
   .cpt .u b{font-size:30px;height:36px;line-height:36px}
-  .cpt .u span{font-size:10px}
-  .ap .g,.conc .g,.cta .w{grid-template-columns:minmax(0,1fr);gap:48px}
-  .ap .ph::before{left:-10px;top:-10px;width:80px;height:80px}
-  .ap .ph .badge{right:10px}
-  .pil,.spk{grid-template-columns:minmax(0,1fr)}
-  .jours{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-  .jours button{padding:12px 10px;text-align:center}
-  .jours button b{font-size:15px} .jours button span{display:none}
-  .ag li{grid-template-columns:minmax(0,1fr);gap:6px;padding:16px 18px}
-  .pays{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-  .chif{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .chif div:nth-child(3){border-left:0} .chif div:nth-child(n+3){border-top:1px solid var(--trait)}
+  .cpt .u span{font-size:9.5px;letter-spacing:.14em}
+  .parts .w{grid-template-columns:minmax(0,1fr)}
+  .parts h2{border-right:0;padding:0;text-align:center}
+  .plg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 16px;justify-items:center}
+  .plg img{height:48px}
+  .ap .g,.conc .g,.theme .w,.del .g{grid-template-columns:minmax(0,1fr);gap:50px}
+  .col .an{display:none}
+  .theme .ql{border-left:0;padding-left:0;border-top:1px solid rgba(255,255,255,.3);padding-top:34px}
+  .pil,.spk,.part{grid-template-columns:minmax(0,1fr);gap:40px}
+  .pg{grid-template-columns:minmax(0,1fr);gap:24px}
+  .jours{position:static;flex-direction:row;border-top:0;border-bottom:1px solid var(--trait)}
+  .jours button{flex:1;padding:14px 4px;text-align:center;border-bottom:0}
+  .jours button::before{left:0;right:0;top:auto;bottom:-1px;width:auto;height:3px;transform:scaleX(0)}
+  .jours button b{font-size:15px}.jours button span{display:none}
+  .jours .ics{display:none}
+  .ag>li{grid-template-columns:minmax(0,1fr);gap:6px}
+  .ag li.f>div>b::after{display:table;margin:8px 0 0}
+  .nb{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}
+  .nb div{padding:0 0 0 20px}.nb div:nth-child(odd){border-left:0;padding-left:0}
+  .del .st{position:static}
+  .pays{grid-template-columns:minmax(0,1fr)}
+  .py{padding:22px 20px}
+  .conc .ph .pr{right:12px;bottom:-24px}
   .gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px}
-  .dl{grid-template-columns:minmax(0,1fr)} .dl img{height:260px}
-  footer .g{grid-template-columns:minmax(0,1fr);gap:30px}
-  .mbar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:rgba(255,255,255,.96);backdrop-filter:blur(10px);box-shadow:0 -1px 0 var(--trait);transform:translateY(110%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+  .dl{grid-template-columns:minmax(0,1fr)} .dl img{height:300px}.dl .tx{padding:30px 24px}
+  footer .g{grid-template-columns:minmax(0,1fr);gap:36px}
+  .mbar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:#fff;box-shadow:0 -1px 0 var(--trait),0 -10px 30px rgba(16,29,47,.08);transform:translateY(110%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
   .mbar.on{transform:none}
-  .mbar a{flex:1;padding:13px 10px;font-size:14px}
-  footer{padding-bottom:70px}
+  .mbar a{flex:1;padding:15px 10px;font-size:12px}
+  footer{padding-bottom:80px}
 }
-@media (prefers-reduced-motion:reduce){ *,*::before,*::after{animation:none!important;transition:none!important} }
+@media (prefers-reduced-motion:reduce){ *,*::before,*::after{animation:none!important;transition:none!important} .rv{opacity:1;transform:none} }
 </style>
 
 <div class="info">
   <div class="w">
-    <div class="lieu"><i></i><b>Man, Côte d'Ivoire</b><span>· 3 – 5 déc. 2026</span></div>
-    <nav aria-label="Accès rapide"><a href="#programme">Programme</a><a href="#intervenants">Intervenants</a><a href="#delegations">Délégations</a><a href="jed2026/#cadre">J'y serai</a></nav>
+    <div class="g">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Man, Côte d'Ivoire</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>3 – 5 décembre 2026</span>
+    </div>
+    <nav aria-label="Accès rapide"><a href="jed2026/">Application participants</a><a href="jed2026/#galerie">Galerie</a><a href="jed2026/#cadre">Visuel « J'y serai »</a></nav>
   </div>
 </div>
 
 <header id="hd">
   <div class="w">
-    <a class="logo" href="#top"><img src="img/jed-bleu.png" alt="JED 2026" width="1000" height="460"><span>Journées de l'Engagement<br>et du Dynamisme</span></a>
+    <a class="logo" href="#top"><img src="img/jed-bleu.png" alt="JED 2026" width="1000" height="460"></a>
     <nav class="menu" id="menu" aria-label="Menu principal">
       <a href="#apropos">À propos</a>
       <a href="#programme">Programme</a>
@@ -332,110 +379,122 @@ footer a{text-decoration:none} footer a:hover{color:#fff}
       <a href="#medias">Médias</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="bt o hd" href="jed2026/#cadre">J'y serai</a>
-    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <a class="bt o hd" href="#participer">Participer</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M8 17h12"/></svg></button>
   </div>
 </header>
 
 <main id="top">
   <div class="hero" id="hero">
-    <div class="slide on"><img src="img/cercle.webp" alt=""></div>
-    <div class="slide"><img src="img/salle.webp" alt=""></div>
-    <div class="slide"><img src="img/orateur.webp" alt=""></div>
-    <div class="w">
-      <div class="ed"><i></i>1ʳᵉ édition · Organisée par l'UJDM</div>
-      <h1>Journées de l'Engagement et du <em>Dynamisme</em> 2026</h1>
-      <p class="th">« Entreprendre, s'employer et s'épanouir pour un avenir durable »</p>
-      <div class="q">
-        <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Du 3 au 5 décembre 2026</span>
-        <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Man, Région du Tonkpi</span>
-      </div>
-      <div class="ctas">
-        <a class="bt o" href="#programme">Découvrir le programme</a>
-        <a class="bt g" href="jed2026/#cadre">Créer mon visuel « J'y serai »</a>
+    <div class="slide on">
+      <img src="img/orateur.webp" alt="">
+      <div class="w anim">
+        <div class="k">1ʳᵉ édition · Man 2026</div>
+        <h1>Journées de l'Engagement et du <span>Dynamisme</span></h1>
+        <p class="sous">« Entreprendre, s'employer et s'épanouir pour un avenir durable ». Trois jours de formation, de mentorat et de compétition pour la jeunesse, du 3 au 5 décembre 2026.</p>
+        <div class="ctas"><a class="bt o" href="#programme">Voir le programme <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a class="bt g" href="jed2026/#cadre">Je serai à Man</a></div>
       </div>
     </div>
-    <div class="sl-n">
-      <div class="dots" id="dots"><i class="on"></i><i></i><i></i></div>
-      <button type="button" id="prev" aria-label="Image précédente"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
-      <button type="button" id="next" aria-label="Image suivante"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+    <div class="slide">
+      <img src="img/cercle.webp" alt="">
+      <div class="w anim">
+        <div class="k">Pays invités</div>
+        <h2>Six délégations <span>africaines</span> à Man</h2>
+        <p class="sous">Sierra Leone, Liberia, Guinée, Burkina Faso, Nigeria et Congo Brazzaville rejoignent la jeunesse ivoirienne pour cette première édition.</p>
+        <div class="ctas"><a class="bt o" href="#delegations">Les délégations <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+      </div>
     </div>
+    <div class="slide">
+      <img src="img/expose.webp" alt="">
+      <div class="w anim">
+        <div class="k">Samedi 5 décembre</div>
+        <h2>Le concours de <span>projets</span> des jeunes</h2>
+        <p class="sous">Les finalistes défendent leur projet devant un jury international. Le meilleur projet est récompensé lors de la cérémonie de clôture.</p>
+        <div class="ctas"><a class="bt o" href="#concours">Le concours <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+      </div>
+    </div>
+    <button class="fl p" type="button" id="prev" aria-label="Diapositive précédente"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button class="fl n" type="button" id="next" aria-label="Diapositive suivante"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+    <div class="prog-sl"><div class="w" id="dots">
+      <button type="button" class="on" aria-label="L'événement"><i></i>L'événement</button>
+      <button type="button" aria-label="Les délégations"><i></i>Les délégations</button>
+      <button type="button" aria-label="Le concours"><i></i>Le concours</button>
+    </div></div>
   </div>
 
-  <div class="cpt-wrap"><div class="w">
-    <div class="cpt" id="cpt" aria-label="Compte à rebours avant l'ouverture">
-      <div class="lab"><b>Ouverture des JED 2026</b><span>Jeudi 3 décembre · 08h00</span></div>
+  <div class="cpt" id="cpt">
+    <div class="w">
+      <div class="t"><small>Ouverture officielle</small><b>Jeudi 3 décembre · 08h00</b></div>
       <div class="u"><b data-u="j"><i>--</i></b><span>Jours</span></div>
       <div class="u"><b data-u="h"><i>--</i></b><span>Heures</span></div>
       <div class="u"><b data-u="m"><i>--</i></b><span>Minutes</span></div>
       <div class="u"><b data-u="s"><i>--</i></b><span>Secondes</span></div>
+      <a class="bt l" href="jed2026/#cadre">J'y serai</a>
     </div>
-  </div></div>
+  </div>
 
   <div class="parts">
     <div class="w">
-      <h2>Les partenaires des JED 2026</h2>
+      <h2>Avec le soutien de</h2>
       <div class="plg">
-        <div><img src="img/ministere.png" alt="Ministère de la Promotion de la Jeunesse, de l'Insertion professionnelle et du Service civique"></div>
-        <div><img src="img/ujdm.png" alt="Union des Jeunes Dynamiques de Man"></div>
-        <div><img src="img/commune.png" alt="Commune de Man"></div>
-        <div><img src="img/cnjci.png" alt="Conseil National des Jeunes de Côte d'Ivoire"></div>
-        <div><img src="img/alliance.png" alt="Alliance Jeunesse Côte d'Ivoire"></div>
-        <div><span class="atk">ATiKAN</span></div>
+        <img src="img/ministere.png" alt="Ministère de la Promotion de la Jeunesse, de l'Insertion professionnelle et du Service civique">
+        <img src="img/ujdm.png" alt="Union des Jeunes Dynamiques de Man">
+        <img src="img/commune.png" alt="Commune de Man">
+        <img src="img/cnjci.png" alt="Conseil National des Jeunes de Côte d'Ivoire">
+        <img src="img/alliance.png" alt="Alliance Jeunesse Côte d'Ivoire">
+        <span class="atk">ATiKAN</span>
       </div>
     </div>
   </div>
 
   <section class="ap" id="apropos">
     <div class="w g">
-      <div class="ph">
-        <img src="img/salle.webp" alt="Des jeunes participants réunis en salle lors d'une précédente rencontre de l'UJDM" loading="lazy">
-        <div class="badge"><b>500</b><span>jeunes attendus à Man</span></div>
+      <div class="col rv">
+        <span class="an">JED · Man 2026</span>
+        <img class="a" src="img/salle.webp" alt="Jeunes participants réunis en salle lors d'une rencontre de l'UJDM" loading="lazy">
+        <img class="b" src="img/parole.webp" alt="Une participante prend la parole au micro" loading="lazy">
       </div>
-      <div>
-        <div class="sur">À propos des JED</div>
-        <h2 class="titre">Le rendez-vous de la <span>jeunesse de Man</span></h2>
-        <p class="intro">Les Journées de l'Engagement et du Dynamisme réunissent pendant trois jours des jeunes de Man, du Tonkpi et de délégations venues d'Afrique de l'Ouest et du Centre pour se former, rencontrer des professionnels, présenter leurs projets et s'engager pour leur communauté.</p>
+      <div class="tx rv">
+        <div class="st"><span class="lab">À propos des JED</span><h2>Le carrefour de la <b>jeunesse engagée</b> de l'Ouest ivoirien</h2><span class="fil"></span></div>
+        <p>Organisées par l'Union des Jeunes Dynamiques de Man (UJDM), les Journées de l'Engagement et du Dynamisme réunissent pendant trois jours des jeunes de Man, du Tonkpi et de six pays invités.</p>
+        <p>Une première édition pensée pour apprendre par la pratique, rencontrer des professionnels, porter un projet et s'engager pour sa communauté.</p>
         <ul class="obj">
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.6 2.5L16 9.5"/></svg><span>Renforcer les capacités des jeunes en entrepreneuriat, innovation et gestion de projet, par la pratique.</span></li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.6 2.5L16 9.5"/></svg><span>Développer leurs compétences techniques et comportementales pour mieux saisir les opportunités professionnelles.</span></li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.6 2.5L16 9.5"/></svg><span>Sensibiliser à la santé mentale, au bien-être psychosocial et à la résilience.</span></li>
-          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.6 2.5L16 9.5"/></svg><span>Identifier et accompagner 10 projets innovants portés par des jeunes, et créer un réseau d'Alumni.</span></li>
+          <li><em>01</em><span>Renforcer les capacités en entrepreneuriat, innovation et gestion de projet</span></li>
+          <li><em>02</em><span>Développer les compétences techniques et comportementales des jeunes</span></li>
+          <li><em>03</em><span>Promouvoir la santé mentale, le bien-être et la résilience</span></li>
+          <li><em>04</em><span>Accompagner 10 projets innovants et créer un réseau d'Alumni</span></li>
         </ul>
+        <a class="lien" href="#programme">Découvrir le programme <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
       </div>
     </div>
   </section>
 
   <section class="theme">
+    <img src="img/atelier.webp" alt="" loading="lazy">
     <div class="w">
-      <div class="sur">Thème central des JED 2026</div>
-      <blockquote>« Entreprendre, s'employer et s'épanouir pour un avenir durable »</blockquote>
-      <p>Panel inaugural le jeudi 3 décembre : « S'employer pour employer ».</p>
+      <div class="rv"><span class="lab">Thème central</span><h2>JED 2026</h2></div>
+      <div class="ql rv">
+        <blockquote>« <b>Entreprendre</b>, <b>s'employer</b> et <b>s'épanouir</b> pour un avenir durable »</blockquote>
+        <div class="pan"><span>Panel inaugural</span>« S'employer pour employer » · Jeudi 3 décembre</div>
+      </div>
     </div>
   </section>
 
   <section>
     <div class="w">
-      <div class="c">
-        <div class="sur">Trois jours pour grandir</div>
-        <h2 class="titre">Former, accompagner, <span>révéler</span></h2>
-        <p class="intro">Deux parcours de formation au choix et une session commune pour tous les participants.</p>
-      </div>
+      <div class="st c rv"><span class="lab">Trois jours pour grandir</span><h2>Former, accompagner, <b>révéler</b></h2><span class="fil"></span><p>Deux parcours de formation au choix et une session commune pour tous les participants.</p></div>
       <div class="pil">
-        <article style="--k:var(--bleu)">
-          <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3Z"/></svg></div>
-          <h3>Entrepreneuriat</h3><span class="sal">Salle A · Module JA DEEP</span>
-          <p>De l'idée au pitch : idéation, opportunités durables, modèle économique et préparation au concours de projets.</p>
+        <article class="rv" style="--k:var(--bleu)">
+          <div class="im"><img src="img/atelier.webp" alt="Atelier de travail en équipe" loading="lazy"><span>01</span></div>
+          <div class="tx"><h3>Entrepreneuriat</h3><span class="sal">Salle A · Module JA DEEP</span><p>De l'idée au pitch : idéation, opportunités durables et préparation au concours de projets.</p></div>
         </article>
-        <article style="--k:var(--vert)">
-          <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></div>
-          <h3>Employabilité</h3><span class="sal">Salle B · Module Success Skills</span>
-          <p>Compétences de vie et soft skills, connaissance de soi, communication professionnelle, CV et entretien d'embauche.</p>
+        <article class="rv" style="--k:var(--vert)">
+          <div class="im"><img src="img/pensif.webp" alt="Participantes attentives pendant une formation" loading="lazy"><span>02</span></div>
+          <div class="tx"><h3>Employabilité</h3><span class="sal">Salle B · Module Success Skills</span><p>Compétences de vie et soft skills pour saisir les opportunités professionnelles.</p></div>
         </article>
-        <article style="--k:var(--orange)">
-          <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></div>
-          <h3>Santé mentale</h3><span class="sal">Grande salle · Tous</span>
-          <p>Comprendre la santé mentale, gérer le stress de l'insertion et de l'entrepreneuriat, savoir demander et offrir de l'aide.</p>
+        <article class="rv" style="--k:var(--orange)">
+          <div class="im"><img src="img/cercle.webp" alt="Jeunes en cercle d'échange" loading="lazy"><span>03</span></div>
+          <div class="tx"><h3>Santé mentale</h3><span class="sal">Grande salle · Tous</span><p>Une session commune pour comprendre la santé mentale, gérer le stress et savoir demander de l'aide.</p></div>
         </article>
       </div>
     </div>
@@ -443,100 +502,84 @@ footer a{text-decoration:none} footer a:hover{color:#fff}
 
   <section class="prog" id="programme">
     <div class="w">
-      <div class="sur">Agenda officiel</div>
-      <h2 class="titre">Le <span>programme</span> des trois journées</h2>
-      <div class="jours" role="tablist" aria-label="Choisir une journée">
-        <button role="tab" id="j0" aria-selected="true" aria-controls="ag"><small>Jour 1</small><b>Jeudi 3 déc.</b><span>Ouverture et lancement des ateliers</span></button>
-        <button role="tab" id="j1" aria-selected="false" aria-controls="ag"><small>Jour 2</small><b>Vendredi 4 déc.</b><span>Formation, santé mentale et mentorat</span></button>
-        <button role="tab" id="j2" aria-selected="false" aria-controls="ag"><small>Jour 3</small><b>Samedi 5 déc.</b><span>Pitchs et clôture</span></button>
-      </div>
-      <div class="jhead" id="jhead"></div>
-      <ul class="ag" id="ag" role="tabpanel"></ul>
-      <div class="act">
-        <a class="bt b" href="jed2026/#programme">Mon programme sur téléphone</a>
-        <button class="bt o" type="button" id="ics">Ajouter à mon agenda</button>
+      <div class="st rv"><span class="lab">Agenda officiel</span><h2>Le <b>programme</b> des trois journées</h2><span class="fil"></span></div>
+      <div class="pg">
+        <div class="jours" role="tablist" aria-label="Choisir une journée">
+          <button role="tab" id="j0" aria-selected="true" aria-controls="ag"><small>Jour 1</small><b>Jeudi 3 déc.</b><span>Ouverture et ateliers</span></button>
+          <button role="tab" id="j1" aria-selected="false" aria-controls="ag"><small>Jour 2</small><b>Vendredi 4 déc.</b><span>Formation et mentorat</span></button>
+          <button role="tab" id="j2" aria-selected="false" aria-controls="ag"><small>Jour 3</small><b>Samedi 5 déc.</b><span>Pitchs et clôture</span></button>
+          <div class="ics"><button class="bt t" type="button" id="ics">Ajouter à mon agenda</button></div>
+        </div>
+        <div>
+          <div class="jhead" id="jhead"></div>
+          <ul class="ag" id="ag" role="tabpanel"></ul>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="intervenants">
     <div class="w">
-      <div class="c">
-        <div class="sur">Ils animent les JED</div>
-        <h2 class="titre">Nos <span>intervenants</span></h2>
-        <p class="intro">Des formateurs et experts engagés pour l'employabilité, l'entrepreneuriat et le bien-être des jeunes.</p>
-      </div>
+      <div class="st c rv"><span class="lab">Ils animent les JED</span><h2>Nos <b>intervenants</b></h2><span class="fil"></span></div>
       <div class="spk">
-        <article class="sp">
-          <div class="im"><img src="img/boris.webp" alt="Portrait de Boris Koffi" loading="lazy"><span class="tg">Employabilité</span></div>
-          <div class="tx"><h3>Boris Koffi</h3><div class="rl">Expert en Soft Skills et Employabilité</div>
-            <p>Directeur des Programmes à African Youth Solution Academy, membre du comité consultatif jeunesse auprès de la Délégation de l'Union européenne en Côte d'Ivoire.</p>
-            <button type="button" data-bio="boris">Lire la biographie <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
-        </article>
-        <article class="sp">
-          <div class="im"><img src="img/ipote.webp" alt="Portrait d'Ipote Djridjehe Anderson" loading="lazy"><span class="tg">Santé mentale</span></div>
-          <div class="tx"><h3>Ipote Djridjehe Anderson</h3><div class="rl">Responsable Suivi-Évaluation à l'UJDM</div>
-            <p>Spécialiste en développement communautaire, engagé pour la santé mentale et le bien-être des jeunes, membre du Youth Sounding Board de l'Union européenne en Côte d'Ivoire.</p>
-            <button type="button" data-bio="ipote">Lire la biographie <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
-        </article>
-        <article class="sp vide">
-          <div class="im"><svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="12" cy="8.5" r="4"/><path d="M4 21c1.2-4.2 4.2-6.3 8-6.3s6.8 2.1 8 6.3"/></svg></div>
-          <div class="tx"><h3>Bientôt annoncé</h3><div class="rl">Intervenant à venir</div><p>Un nouvel intervenant sera dévoilé très prochainement.</p></div>
-        </article>
+        <button class="sp rv" type="button" data-bio="boris">
+          <img src="img/boris.webp" alt="" loading="lazy">
+          <div class="tx"><span class="tg">Employabilité</span><h3>Boris Koffi</h3><div class="rl">Expert en Soft Skills et Employabilité</div><div class="pl">Biographie <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></div></div>
+        </button>
+        <button class="sp rv" type="button" data-bio="ipote">
+          <img src="img/ipote.webp" alt="" loading="lazy">
+          <div class="tx"><span class="tg">Santé mentale</span><h3>Ipote Djridjehe Anderson</h3><div class="rl">Responsable Suivi-Évaluation à l'UJDM</div><div class="pl">Biographie <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></div></div>
+        </button>
+        <div class="sp vide rv">
+          <div class="ic"><svg width="110" height="110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><circle cx="12" cy="8.5" r="4"/><path d="M4 21c1.2-4.2 4.2-6.3 8-6.3s6.8 2.1 8 6.3"/></svg></div>
+          <div class="tx"><span class="tg">À venir</span><h3>Bientôt annoncé</h3><div class="rl">Un nouvel intervenant sera dévoilé prochainement</div></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <dialog id="bio"><div class="dl"><img id="bioImg" src="" alt=""><div class="tx"><h3 id="bioNom"></h3><div class="rl" id="bioRole"></div><div class="bio" id="bioTx"></div></div></div><button class="x" id="bioX" aria-label="Fermer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button></dialog>
+  <dialog id="bio"><div class="dl"><img id="bioImg" src="" alt=""><div class="tx"><h3 id="bioNom"></h3><div class="rl" id="bioRole"></div><div class="bio" id="bioTx"></div></div></div><button class="x" id="bioX" aria-label="Fermer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button></dialog>
 
-  <section class="del" id="delegations">
+  <div class="chif">
+    <img src="img/remise.webp" alt="" loading="lazy">
     <div class="w">
-      <div class="c">
-        <div class="sur">Pays invités</div>
-        <h2 class="titre">Six <span>délégations étrangères</span> à Man</h2>
-        <p class="intro" style="margin-inline:auto">Pour cette 1ʳᵉ édition, les JED accueillent des délégations de jeunes venues de six pays d'Afrique de l'Ouest et du Centre.</p>
+      <div class="st rv"><span class="lab">En chiffres</span><h2>La 1ʳᵉ édition <b>en bref</b></h2></div>
+      <div class="nb rv">
+        <div><b>500<sup>+</sup></b><span>Jeunes attendus</span></div>
+        <div><b>6</b><span>Pays invités</span></div>
+        <div><b>10</b><span>Projets innovants accompagnés</span></div>
+        <div><b>3</b><span>Jours de formation et d'échanges</span></div>
       </div>
-      <div class="pays">
-        <div class="py"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#0072C6"/><rect width="30" height="13.34" fill="#fff"/><rect width="30" height="6.67" fill="#1EB53A"/></svg><b>Sierra Leone</b><span>Afrique de l'Ouest</span></div>
-        <div class="py"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><g fill="#BF0A30"><rect y="0" width="30" height="1.82"/><rect y="3.64" width="30" height="1.82"/><rect y="7.27" width="30" height="1.82"/><rect y="10.9" width="30" height="1.82"/><rect y="14.55" width="30" height="1.82"/><rect y="18.18" width="30" height="1.82"/></g><rect width="9.1" height="9.1" fill="#002868"/><path fill="#fff" d="M4.55 1.9l.72 2.2h2.3l-1.86 1.36.71 2.2-1.87-1.36-1.87 1.36.71-2.2L1.53 4.1h2.3z"/></svg><b>Liberia</b><span>Afrique de l'Ouest</span></div>
-        <div class="py"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="10" height="20" fill="#CE1126"/><rect x="10" width="10" height="20" fill="#FCD116"/><rect x="20" width="10" height="20" fill="#009460"/></svg><b>Guinée</b><span>Afrique de l'Ouest</span></div>
-        <div class="py"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="10" fill="#EF2B2D"/><rect y="10" width="30" height="10" fill="#009E49"/><path fill="#FCD116" d="M15 6.2l1.12 3.45h3.63l-2.94 2.13 1.12 3.45L15 13.1l-2.93 2.13 1.12-3.45-2.94-2.13h3.63z"/></svg><b>Burkina Faso</b><span>Afrique de l'Ouest</span></div>
-        <div class="py"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="10" height="20" fill="#008751"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#008751"/></svg><b>Nigeria</b><span>Afrique de l'Ouest</span></div>
-        <div class="py"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#DC241F"/><path d="M0 0h22L0 20z" fill="#FBDE4A"/><path d="M0 0h14L0 12.7z" fill="#009543"/></svg><b>Congo</b><span>Brazzaville · Afrique centrale</span></div>
-      </div>
-      <div class="hote"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="10" height="20" fill="#F77F00"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#009E60"/></svg>Accueillies par la Côte d'Ivoire, à Man, au cœur de la région du Tonkpi.</div>
-    </div>
-  </section>
-
-  <section>
-    <div class="w">
-      <div class="c">
-        <div class="sur">En chiffres</div>
-        <h2 class="titre">Les JED 2026 <span>en bref</span></h2>
-      </div>
-      <div class="chif">
-        <div><b data-n="500">500</b><span>jeunes attendus</span></div>
-        <div><b data-n="6">6</b><span>pays invités</span></div>
-        <div><b data-n="10">10</b><span>projets innovants accompagnés</span></div>
-        <div><b data-n="3">3</b><span>jours de formation et d'échanges</span></div>
-      </div>
-    </div>
-  </section>
-
-  <div class="cta">
-    <img src="img/cadre.webp" alt="" loading="lazy">
-    <div class="w">
-      <div><h2>Vous serez à Man ?</h2><p>Créez votre visuel officiel « J'y serai » avec votre photo et partagez-le sur vos réseaux avec #JED2026.</p></div>
-      <div class="bx"><a class="bt l" href="jed2026/#cadre">Créer mon visuel</a><a class="bt g" href="jed2026/">Ouvrir l'application JED</a></div>
     </div>
   </div>
 
+  <section class="del" id="delegations">
+    <div class="w g">
+      <div class="st rv">
+        <span class="lab">Pays invités</span>
+        <h2>Six <b>délégations</b> étrangères à Man</h2><span class="fil"></span>
+        <p>Pour sa première édition, les JED accueillent des délégations de jeunes venues d'Afrique de l'Ouest et du Centre, pour échanger, se former et bâtir un réseau au-delà des frontières.</p>
+        <div class="hote"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="10" height="20" fill="#F77F00"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#009E60"/></svg>Pays hôte : Côte d'Ivoire · Man, Région du Tonkpi</div>
+      </div>
+      <div class="pays rv">
+        <div class="py"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#0072C6"/><rect width="30" height="13.34" fill="#fff"/><rect width="30" height="6.67" fill="#1EB53A"/></svg><div><em>01</em><b>Sierra Leone</b><span>Afrique de l'Ouest</span></div></div>
+        <div class="py"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><g fill="#BF0A30"><rect y="0" width="30" height="1.82"/><rect y="3.64" width="30" height="1.82"/><rect y="7.27" width="30" height="1.82"/><rect y="10.9" width="30" height="1.82"/><rect y="14.55" width="30" height="1.82"/><rect y="18.18" width="30" height="1.82"/></g><rect width="9.1" height="9.1" fill="#002868"/><path fill="#fff" d="M4.55 1.9l.72 2.2h2.3l-1.86 1.36.71 2.2-1.87-1.36-1.87 1.36.71-2.2L1.53 4.1h2.3z"/></svg><div><em>02</em><b>Liberia</b><span>Afrique de l'Ouest</span></div></div>
+        <div class="py"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="10" height="20" fill="#CE1126"/><rect x="10" width="10" height="20" fill="#FCD116"/><rect x="20" width="10" height="20" fill="#009460"/></svg><div><em>03</em><b>Guinée</b><span>Afrique de l'Ouest</span></div></div>
+        <div class="py"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="10" fill="#EF2B2D"/><rect y="10" width="30" height="10" fill="#009E49"/><path fill="#FCD116" d="M15 6.2l1.12 3.45h3.63l-2.94 2.13 1.12 3.45L15 13.1l-2.93 2.13 1.12-3.45-2.94-2.13h3.63z"/></svg><div><em>04</em><b>Burkina Faso</b><span>Afrique de l'Ouest</span></div></div>
+        <div class="py"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="10" height="20" fill="#008751"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#008751"/></svg><div><em>05</em><b>Nigeria</b><span>Afrique de l'Ouest</span></div></div>
+        <div class="py"><svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#DC241F"/><path d="M0 0h22L0 20z" fill="#FBDE4A"/><path d="M0 0h14L0 12.7z" fill="#009543"/></svg><div><em>06</em><b>Congo</b><span>Brazzaville · Afrique centrale</span></div></div>
+      </div>
+    </div>
+  </section>
+
   <section class="conc" id="concours">
     <div class="w g">
-      <div>
-        <div class="sur">Samedi 5 décembre</div>
-        <h2 class="titre">Concours de <span>projets</span></h2>
-        <p class="intro">Les finalistes présentent leur projet devant un jury international, suivi de questions-réponses. Chaque candidat dispose du même temps de parole. Le meilleur projet est récompensé lors de la grande cérémonie de clôture.</p>
+      <div class="ph rv">
+        <img src="img/expose.webp" alt="Deux jeunes présentent leur projet devant le public" loading="lazy">
+        <div class="pr"><small>Clôture · 5 décembre</small><b>Remise des prix au meilleur projet</b></div>
+      </div>
+      <div class="rv" id="critbox">
+        <div class="st"><span class="lab">Samedi 5 décembre · 09h30</span><h2>Concours de <b>projets</b></h2><span class="fil"></span><p>Les finalistes présentent leur projet devant un jury international, suivi de questions-réponses. Chaque candidat dispose du même temps de parole.</p></div>
         <div class="crit" id="crit">
           <div><div class="lb">Modèle économique<span>25 %</span></div><div class="br"><i data-w="25"></i></div></div>
           <div><div class="lb">Pertinence et caractère durable<span>20 %</span></div><div class="br"><i data-w="20"></i></div></div>
@@ -545,34 +588,61 @@ footer a{text-decoration:none} footer a:hover{color:#fff}
           <div><div class="lb">Réponses au jury<span>15 %</span></div><div class="br"><i data-w="15"></i></div></div>
         </div>
       </div>
-      <div class="ph"><img src="img/expose.webp" alt="Deux jeunes présentent leur projet devant le public" loading="lazy"></div>
     </div>
   </section>
 
-  <section class="prog" id="medias" style="padding-top:80px">
+  <section id="participer">
     <div class="w">
-      <div class="c">
-        <div class="sur">Médias</div>
-        <h2 class="titre">En <span>images</span></h2>
-        <p class="intro">Des rencontres précédentes de l'UJDM. Les photos des JED 2026 seront publiées dans la galerie pendant l'événement.</p>
+      <div class="st c rv"><span class="lab">Participer</span><h2>Prenez part aux <b>JED 2026</b></h2><span class="fil"></span></div>
+      <div class="part">
+        <article class="ca rv">
+          <div class="im"><img src="img/cadre.webp" alt="Participante posant avec un cadre photo" loading="lazy"></div>
+          <div class="tx"><h3>Participants</h3><p>Créez votre visuel officiel « J'y serai » et suivez votre programme sur l'application des participants.</p><a class="lien" href="jed2026/#cadre">Créer mon visuel <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+        </article>
+        <article class="ca rv">
+          <div class="im"><img src="img/remise.webp" alt="Remise d'attestations à de jeunes participants" loading="lazy"></div>
+          <div class="tx"><h3>Partenaires</h3><p>Institutions, entreprises et organisations : associez votre nom à l'engagement de la jeunesse de l'Ouest ivoirien.</p><a class="lien" href="#contact">Devenir partenaire <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+        </article>
+        <article class="ca rv">
+          <div class="im"><img src="img/studio.webp" alt="Intervenants en studio radio" loading="lazy"></div>
+          <div class="tx"><h3>Médias</h3><p>Journalistes, radios et créateurs de contenus : contactez l'équipe d'organisation pour couvrir l'événement.</p><a class="lien" href="#contact">Nous contacter <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div>
+        </article>
       </div>
-      <div class="gal">
+    </div>
+  </section>
+
+  <section class="prog" id="medias">
+    <div class="w">
+      <div class="galb rv">
+        <div class="st"><span class="lab">Médias</span><h2>En <b>images</b></h2><span class="fil"></span></div>
+        <a class="lien" href="jed2026/#galerie">Toute la galerie <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </div>
+      <div class="gal rv">
         <a class="gr" href="jed2026/#galerie"><img src="img/orateur.webp" alt="Un intervenant devant un public de jeunes" loading="lazy"></a>
         <a href="jed2026/#galerie"><img src="img/parole.webp" alt="Une participante prend la parole" loading="lazy"></a>
         <a href="jed2026/#galerie"><img src="img/remise.webp" alt="Remise d'attestations" loading="lazy"></a>
         <a href="jed2026/#galerie"><img src="img/atelier.webp" alt="Atelier de formation" loading="lazy"></a>
         <a href="jed2026/#galerie"><img src="img/pensif.webp" alt="Participantes attentives pendant une conférence" loading="lazy"></a>
       </div>
-      <div class="c" style="margin-top:28px"><a class="bt b" href="jed2026/#galerie">Voir toute la galerie</a></div>
     </div>
   </section>
+
+  <div class="cta">
+    <img src="img/salle.webp" alt="" loading="lazy">
+    <div class="w rv">
+      <span class="lab">3 · 4 · 5 décembre 2026</span>
+      <h2>Rendez-vous à Man pour la 1ʳᵉ édition</h2>
+      <p>Annoncez votre présence avec votre visuel officiel et partagez-le avec #JED2026.</p>
+      <div class="ctas"><a class="bt o" href="jed2026/#cadre">Créer mon visuel « J'y serai »</a><a class="bt g" href="jed2026/">Ouvrir l'application</a></div>
+    </div>
+  </div>
 </main>
 
 <footer id="contact">
   <div class="w g">
     <div>
       <img class="lg" src="img/jed-blanc.png" alt="JED 2026" width="1000" height="460">
-      <p>Journées de l'Engagement et du Dynamisme · 1ʳᵉ édition. Du 3 au 5 décembre 2026 à Man, Région du Tonkpi, Côte d'Ivoire.</p>
+      <p>Journées de l'Engagement et du Dynamisme, 1ʳᵉ édition. Du 3 au 5 décembre 2026 à Man, Région du Tonkpi, Côte d'Ivoire.</p>
     </div>
     <div>
       <h3>Organisateur</h3>
@@ -586,11 +656,19 @@ footer a{text-decoration:none} footer a:hover{color:#fff}
       <ul>
         <li class="cp"><span>+225 05 07 20 40 77</span><button type="button" data-c="+225 05 07 20 40 77">Copier</button></li>
         <li class="cp"><span>+225 07 67 69 55 18</span><button type="button" data-c="+225 07 67 69 55 18">Copier</button></li>
-        <li><a href="jed2026/">Application des participants</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Liens utiles</h3>
+      <ul>
+        <li><a href="#programme">Programme</a></li>
+        <li><a href="jed2026/">Application participants</a></li>
+        <li><a href="jed2026/#cadre">Visuel « J'y serai »</a></li>
+        <li><a href="jed2026/#galerie">Galerie photos</a></li>
       </ul>
     </div>
   </div>
-  <div class="bas"><div class="w"><span>© 2026 JED · Union des Jeunes Dynamiques de Man</span><span>Site réalisé par ATIKAN</span></div></div>
+  <div class="bas"><div class="w"><span>© 2026 JED · Union des Jeunes Dynamiques de Man</span><span>Réalisation ATIKAN</span></div></div>
   <div class="tri" aria-hidden="true"><i style="background:var(--orange)"></i><i style="background:#fff"></i><i style="background:var(--vert)"></i></div>
 </footer>
 
@@ -598,43 +676,44 @@ footer a{text-decoration:none} footer a:hover{color:#fff}
 
 <script>
 (function(){
-  /* menu */
   const hd=document.getElementById('hd'), bg=document.getElementById('burger');
   bg.addEventListener('click',()=>{ const o=hd.classList.toggle('ouvert'); bg.setAttribute('aria-expanded',o); });
   document.querySelectorAll('#menu a').forEach(a=>a.addEventListener('click',()=>{ hd.classList.remove('ouvert'); bg.setAttribute('aria-expanded','false'); }));
+  addEventListener('scroll',()=>hd.classList.toggle('ombre',scrollY>60),{passive:true});
 
-  /* diaporama */
-  const sl=[...document.querySelectorAll('.slide')], dots=[...document.querySelectorAll('#dots i')]; let k=0, tmr;
-  function va(n){ sl[k].classList.remove('on'); dots[k].classList.remove('on'); k=(n+sl.length)%sl.length; sl[k].classList.add('on'); dots[k].classList.add('on'); }
-  const auto=()=>{ clearInterval(tmr); tmr=setInterval(()=>va(k+1),6000); };
-  document.getElementById('prev').onclick=()=>{ va(k-1); auto(); }; document.getElementById('next').onclick=()=>{ va(k+1); auto(); };
-  if(!matchMedia('(prefers-reduced-motion: reduce)').matches) auto();
+  const sl=[...document.querySelectorAll('.slide')], dots=[...document.querySelectorAll('#dots button')]; let k=0, tmr;
+  const calme=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function va(n){ sl[k].classList.remove('on'); dots[k].classList.remove('on'); k=(n+sl.length)%sl.length; sl[k].classList.add('on'); void dots[k].offsetWidth; dots[k].classList.add('on'); if(!calme){ clearTimeout(tmr); tmr=setTimeout(()=>va(k+1),7000); } }
+  document.getElementById('prev').onclick=()=>va(k-1); document.getElementById('next').onclick=()=>va(k+1);
+  dots.forEach((d,i)=>d.onclick=()=>va(i));
+  if(!calme) tmr=setTimeout(()=>va(1),7000);
+  let x0=null; const hero=document.getElementById('hero');
+  hero.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});
+  hero.addEventListener('touchend',e=>{ if(x0===null) return; const dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>50) va(k+(dx<0?1:-1)); x0=null; });
 
-  /* compte à rebours */
   const D=new Date('2026-12-03T08:00:00Z'), F=new Date('2026-12-06T00:00:00Z'), c=document.getElementById('cpt'), p=n=>String(n).padStart(2,'0'), prev={};
   const put=(u,v)=>{ if(prev[u]===v) return; prev[u]=v; c.querySelector('[data-u='+u+']').innerHTML='<i class="r">'+v+'</i>'; };
   function t(){ const now=new Date(), ms=D-now;
-    if(ms<=0){ c.classList.add('live'); c.innerHTML='<div class="lab" style="text-align:center;align-items:center"><b>'+(now<F?'Les JED 2026 se déroulent en ce moment à Man':'Merci à tous les participants des JED 2026')+'</b></div>'; return false; }
+    if(ms<=0){ c.classList.add('live'); c.querySelector('.w').innerHTML='<div class="t"><small>JED 2026</small><b>'+(now<F?'Les JED 2026 se déroulent en ce moment à Man':'Merci à tous les participants des JED 2026')+'</b></div><a class="bt l" href="jed2026/'+(now<F?'#programme':'#galerie')+'">'+(now<F?'Programme du jour':'Voir la galerie')+'</a>'; return false; }
     const s=Math.floor(ms/1e3); put('j',String(Math.floor(s/86400))); put('h',p(Math.floor(s%86400/3600))); put('m',p(Math.floor(s%3600/60))); put('s',p(s%60)); return true; }
   if(t()){ const id=setInterval(()=>{ if(!t()) clearInterval(id); },1000); }
 
-  /* programme officiel */
   const J=[
-   {t:'Ouverture et lancement des ateliers',h:'08h00 – 16h30',it:[
+   {h:'08h00 – 16h30',it:[
     ['08h00 – 09h00','Arrivée, accueil et inscription des participants et des invités'],
     ['09h00 – 11h30','Cérémonie officielle d\'ouverture',null,['Accueil des autorités par un groupe de jeunes, au rythme du tam-tam du peuple Dan','Allocution du Coordonnateur principal des JED : présentation du programme et consignes de sécurité','Slam sur la situation des jeunes','Mots des représentants des pays invités','Mots des partenaires','Allocution du Président du Conseil d\'Administration de l\'UJDM','Mots des autorités locales de Man','Animation musicale','Ouverture officielle des JED 2026 par Monsieur le Préfet','Photo de famille'],'f'],
     ['11h30 – 12h30','Panel inaugural : « S\'employer pour employer »','Échanges entre panélistes, modérés, suivis de questions-réponses avec le public.'],
     ['12h30 – 14h00','Pause déjeuner libre',null,null,'p'],
     ['14h00 – 16h00','Lancement des ateliers de formation',null,['<span class="sa A">Salle A</span>Entrepreneuriat · module JA DEEP : idéation et opportunités durables','<span class="sa B">Salle B</span>Employabilité · module Success Skills : compétences de vie et soft skills']],
     ['16h00 – 16h30','Débriefing du Jour 1 et fin des travaux','Points clés de la journée et annonces pour le lendemain.']]},
-   {t:'Formation, santé mentale et mentorat',h:'09h00 – 16h30',it:[
+   {h:'09h00 – 16h30',it:[
     ['09h00 – 09h30','Bienvenue au Jour 2','Consignes de sécurité et de bien-être, activité dynamisante, retour sur le Jour 1 et aperçu de la journée.'],
     ['09h30 – 12h30','Ateliers de formation (suite)',null,['<span class="sa A">Salle A</span>Entrepreneuriat · suite du module JA DEEP','<span class="sa B">Salle B</span>Employabilité · suite du module Success Skills']],
     ['12h30 – 13h30','Pause déjeuner libre',null,null,'p'],
-    ['13h30 – 15h15','Session commune : santé mentale des jeunes','Plénière en grande salle, pour tous les participants. Comprendre la santé mentale, gérer le stress de l\'insertion et de l\'entrepreneuriat, savoir demander et offrir de l\'aide.',null,'f'],
-    ['15h15 – 16h15','Deux activités en parallèle',null,['<span class="sa G">Grande salle</span>Mentorat et réseautage entre participants, experts, entreprises et partenaires','<span class="sa A">Salle A</span>Coaching des finalistes du concours de projets, en préparation des pitchs']],
+    ['13h30 – 15h15','Session commune : santé mentale des jeunes','Plénière en grande salle, pour tous les participants.',null,'f'],
+    ['15h15 – 16h15','Deux activités en parallèle',null,['<span class="sa G">Grande salle</span>Mentorat et réseautage avec experts, entreprises et partenaires','<span class="sa A">Salle A</span>Coaching des finalistes du concours de projets']],
     ['16h15 – 16h30','Débriefing du Jour 2 et fin des travaux','Bilan de la journée et consignes pour la journée finale.']]},
-   {t:'Journée mondiale du bénévolat · Pitchs et clôture',h:'09h00 – 17h00',it:[
+   {h:'09h00 – 17h00 · Journée mondiale du bénévolat',it:[
     ['09h00 – 09h30','Accueil des participants et installation du jury','Consignes de sécurité ; briefing du jury sur les critères d\'évaluation.'],
     ['09h30 – 12h00','Concours de projets · Session de pitchs','Passage des finalistes devant le jury international, suivi de questions-réponses.',null,'f'],
     ['12h00 – 14h00','Pause déjeuner et délibération du jury',null,null,'p'],
@@ -642,17 +721,15 @@ footer a{text-decoration:none} footer a:hover{color:#fff}
     ['17h00','Cocktail de clôture']]}];
   const ag=document.getElementById('ag'), jh=document.getElementById('jhead'), tabs=[0,1,2].map(i=>document.getElementById('j'+i));
   function jour(i){ tabs.forEach((b,n)=>b.setAttribute('aria-selected',n===i));
-    jh.innerHTML='<span><b>'+['Jeudi 3','Vendredi 4','Samedi 5'][i]+' décembre 2026</b> · '+J[i].t+'</span><span>Horaires : '+J[i].h+'</span>';
-    ag.innerHTML=J[i].it.map((e,n)=>'<li class="'+(e[4]||'')+'" style="animation-delay:'+(n*50)+'ms"><time>'+e[0]+'</time><div><b>'+e[1]+'</b>'+(e[2]?'<p class="d">'+e[2]+'</p>':'')+(e[3]?'<ul>'+e[3].map(x=>'<li>'+x+'</li>').join('')+'</ul>':'')+'</div></li>').join(''); }
+    jh.innerHTML='<h3>'+['Jeudi 3','Vendredi 4','Samedi 5'][i]+' décembre</h3><span>'+J[i].h+'</span>';
+    ag.innerHTML=J[i].it.map((e,n)=>'<li class="'+(e[4]||'')+'" style="animation-delay:'+(n*60)+'ms"><time>'+e[0]+'</time><div><b>'+e[1]+'</b>'+(e[2]?'<p class="d">'+e[2]+'</p>':'')+(e[3]?'<ul>'+e[3].map(x=>'<li>'+x+'</li>').join('')+'</ul>':'')+'</div></li>').join(''); }
   tabs.forEach((b,i)=>b.addEventListener('click',()=>jour(i)));
   const auj=new Date().toISOString().slice(0,10), di=['2026-12-03','2026-12-04','2026-12-05'].indexOf(auj); jour(di<0?0:di);
 
-  /* agenda (.ics) */
   document.getElementById('ics').addEventListener('click',()=>{
     const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//UJDM//JED 2026//FR','BEGIN:VEVENT','UID:jed2026@ujdm','DTSTAMP:20261123T000000Z','DTSTART;VALUE=DATE:20261203','DTEND;VALUE=DATE:20261206','SUMMARY:JED 2026 – Journées de l\'Engagement et du Dynamisme','LOCATION:Man\\, Région du Tonkpi\\, Côte d\'Ivoire','DESCRIPTION:'+location.href.split('#')[0],'END:VEVENT','END:VCALENDAR'].join('\r\n');
     const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'})); a.download='JED2026.ics'; document.body.appendChild(a); a.click(); a.remove(); });
 
-  /* biographies */
   const BIO={
    boris:{n:'Boris Koffi',r:'Expert en Soft Skills et Employabilité',img:'img/boris.webp',t:'<p>Consultant en insertion professionnelle, formateur et coach en développement des compétences comportementales, Boris Koffi accompagne depuis plusieurs années les jeunes et les femmes dans le développement de leur potentiel, leur orientation professionnelle et leur accès aux opportunités d\'emploi.</p><p>Fort d\'une expérience dans la conception et l\'animation de programmes de formation, il intervient notamment sur les soft skills, l\'intelligence émotionnelle, la confiance en soi, la communication professionnelle et les techniques de recherche d\'emploi : CV, lettre de motivation, entretien d\'embauche et stratégie de recherche d\'opportunités.</p><p>Directeur des Programmes à African Youth Solution Academy et membre du comité consultatif jeunesse auprès de la Délégation de l\'Union européenne en Côte d\'Ivoire, il œuvre pour le renforcement des compétences et l\'autonomisation des jeunes.</p>'},
    ipote:{n:'Ipote Djridjehe Anderson',r:'Responsable Suivi-Évaluation à l\'UJDM',img:'img/ipote.webp',t:'<ul><li>Spécialiste en développement communautaire (SEC)</li><li>Formateur et accompagnateur en leadership et autonomisation des adolescent·e·s</li><li>Acteur engagé dans la promotion de la santé mentale et du bien-être des jeunes</li><li>Membre du Youth Sounding Board (YSB) de l\'Union européenne en Côte d\'Ivoire</li><li>Membre de la Task Force Société civile – Team Europe</li></ul>'}};
@@ -663,17 +740,16 @@ footer a{text-decoration:none} footer a:hover{color:#fff}
   document.getElementById('bioX').onclick=()=>dlg.close();
   dlg.addEventListener('click',e=>{ if(e.target===dlg) dlg.close(); });
 
-  /* barres du jury et chiffres à l'apparition */
-  const crit=document.getElementById('crit');
-  const fill=()=>crit.querySelectorAll('i').forEach(i=>i.style.width=i.dataset.w*4+'%');
-  if('IntersectionObserver' in window){ new IntersectionObserver((e,o)=>{ if(e[0].isIntersecting){ fill(); o.disconnect(); } },{threshold:.3}).observe(crit); } else fill();
+  const crit=document.getElementById('crit'), fill=()=>crit.querySelectorAll('i').forEach(i=>i.style.width=i.dataset.w*4+'%');
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('vu'); if(e.target.contains(crit)) setTimeout(fill,300); io.unobserve(e.target); } }),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+    const mb=document.getElementById('mbar'); new IntersectionObserver(e=>mb.classList.toggle('on',!e[0].isIntersecting),{threshold:0}).observe(hero);
+  } else { document.querySelectorAll('.rv').forEach(el=>el.classList.add('vu')); fill(); }
 
-  /* barre mobile */
-  const mb=document.getElementById('mbar'), hero=document.getElementById('hero');
-  if('IntersectionObserver' in window) new IntersectionObserver(e=>mb.classList.toggle('on',!e[0].isIntersecting),{threshold:0}).observe(hero);
-
-  /* copier */
   document.querySelectorAll('[data-c]').forEach(b=>b.addEventListener('click',async()=>{ try{ await navigator.clipboard.writeText(b.dataset.c); b.textContent='Copié'; }catch(e){ const r=document.createRange(); r.selectNodeContents(b.previousElementSibling); getSelection().removeAllRanges(); getSelection().addRange(r); b.textContent='Sélectionné'; } setTimeout(()=>b.textContent='Copier',1800); }));
 })();
 </script>
-</body></html>
+
+</body>
+</html>
